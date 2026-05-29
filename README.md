@@ -76,3 +76,8 @@ When adding a new skill to this repository, follow these best practices:
    ```
 3. **Add helper scripts or references** inside `scripts/` and `references/` subdirectories inside your skill folder if programmatic tools are needed.
 4. **Update this root README.md** table to list your new skill!
+  
+---
+## ➕ 📄 License
+
+MIT — free to fork and use for personal or commercial projects.
