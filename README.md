@@ -113,4 +113,5 @@ description: Brief description of the skill.
 
 ## 📄 License
 
-MIT
+MIT — free to fork and use for personal or commercial projects.
+>>>>>>> origin/main
