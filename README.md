@@ -37,7 +37,7 @@ Installing the entire repository as a plugin automatically exposes all current a
 cd ~/.gemini/config/plugins
 
 # Clone this repository
-git clone https://github.com/satiricalguru/claude-skills.git
+git clone https://github.com/satiricalguru/Agents-skills.git
 
 # Restart your IDE / Agent to load the plugin
 ```
@@ -114,4 +114,3 @@ description: Brief description of the skill.
 ## 📄 License
 
 MIT — free to fork and use for personal or commercial projects.
->>>>>>> origin/main
