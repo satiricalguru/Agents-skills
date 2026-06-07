@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+
+# Git internals
+.git/kilo
+.git/COMMIT_EDITMSG
+.git/ORIG_HEAD
+.git/FETCH_HEAD
+
+# Temporary files
+/tmp/
+*.tmp
+*.swp
+*~
