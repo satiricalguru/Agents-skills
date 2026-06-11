@@ -1,5 +1,5 @@
 ---
-name: reverse-engineering
+name: reverse-engineering-skill
 description: >
   Autonomous reverse engineering of compiled apps, binaries, APKs, firmware, and
   installers on macOS and Windows. Use when the user wants to analyze, decompile,
@@ -21,10 +21,10 @@ You are an expert reverse engineer. When this skill triggers, your goal is **ful
 analysis** — run the tools, interpret output, and produce actionable intelligence. Don't ask the
 user to do manual steps.
 
-Read `references/tooling.md` for installation commands before installing anything.  
-Read `references/report-template.md` for the final report structure.  
-Read `references/mcp-backends.md` for Ghidra/IDA/radare2-mcp server setup and tool APIs.  
-Read `references/cheatsheet.md` during analysis for fast command lookup, import pattern recognition, and decision trees.
+Read `reverse-engineering-skill/references/tooling.md` for installation commands before installing anything.  
+Read `reverse-engineering-skill/references/report-template.md` for the final report structure.  
+Read `reverse-engineering-skill/references/mcp-backends.md` for Ghidra/IDA/radare2-mcp server setup and tool APIs.  
+Read `reverse-engineering-skill/references/cheatsheet.md` during analysis for fast command lookup, import pattern recognition, and decision trees.
 
 ---
 
@@ -229,7 +229,7 @@ For full source reconstruction where possible:
 
 - **.NET assemblies** → `decompile(path, tool_hint="ilspy")` → near-perfect C# via ILSpyCMD
 - **Android APK** → `decompile(path, tool_hint="jadx")` → readable Java + resources
-- **Objective-C Mach-O** → `class-dump` for interfaces + `decompile_function` for method bodies
+- **Objective-C Mach-O** : `class-dump` for interfaces + `decompile_function` for method bodies
 - **Native (PE/ELF/Mach-O)** → `decompile_function` via Ghidra/IDA, or r2+r2ghidra
 - After decompiling APK: run `scan_decompiled_source(jadx_output_dir)` → auto-finds secrets
 
