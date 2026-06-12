@@ -179,8 +179,6 @@ description: Brief description of the skill.
 
 ## 🌍 Global System Skills
 
-We have imported the following 57 globally installed system skills from your Mac environment:
-
 ### DevTools & Browser Auditing
 - **[`a11y-debugging`](skills/a11y-debugging.md)**: Web accessibility debugging and audits.
 - **[`chrome-devtools`](skills/chrome-devtools.md)**: DevTools MCP browser automation and troubleshooting.
