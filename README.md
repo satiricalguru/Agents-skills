@@ -84,7 +84,9 @@ This repository is structured as a standard plugin, allowing you to load all con
 
 | Skill | Description | Key Features & Integrations |
 | :--- | :--- | :--- |
+| **[`mongodb`](skills/mongodb.md)** | Model data, connect, write updates, index schemas, run aggregations, and perform Atlas/Vector search in MongoDB. | Mongoose models, update operators, ESR indexes, multi-document transactions, Atlas search |
 | **[`reverse-engineering-skill`](skills/reverse-engineering-skill.md)** | Binary analysis, firmware extraction, vulnerability research, and CTF solvers. | Ghidra MCP, radare2-mcp, angr symbolic execution, class-dump, jadx, checksec |
+| **[`supabase`](skills/supabase.md)** | Integrate, query, manage migrations, TypeScript type generation, and configure RLS on Supabase. | Postgres migrations, RLS security, Next.js SSR cookie auth, Edge Functions, pgvector |
 
 ---
 
@@ -273,7 +275,7 @@ description: Brief description of the skill.
 ├── skills/
 │   ├── idea-refine/                 # idea-refine support assets (examples, frameworks, etc.)
 │   ├── reverse-engineering-skill/   # reverse-engineering support assets (SETUP.md, scripts, etc.)
-│   └── ... (83 restructured .md skill files directly in skills/)
+│   └── ... (85 restructured .md skill files directly in skills/)
 ├── references/                  # Supplementary checklists
 ├── agents/                      # Specialist personas
 ├── commands/                    # Antigravity CLI commands
