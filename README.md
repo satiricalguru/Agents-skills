@@ -153,7 +153,25 @@ Run the following command in your terminal to automatically install or update al
 curl -sSL https://raw.githubusercontent.com/satiricalguru/Agents-skills/main/install.sh | bash
 ```
 
-### Method 2: Manual Unified Plugin Installation
+### Method 2: NPM / NPX Installer (Node.js Users)
+
+You can run the installer script directly using `npx` (without cloning the repository manually):
+
+```bash
+npx github:satiricalguru/Agents-skills
+```
+
+Alternatively, you can install the package globally via npm to make the `agents-skills` command available globally:
+
+```bash
+# Install globally
+npm install -g github:satiricalguru/Agents-skills
+
+# Run the installer command at any time to install/update skills
+agents-skills
+```
+
+### Method 3: Manual Unified Plugin Installation
 
 Installing the entire repository as a plugin manually automatically exposes all current and future skills to your agent:
 

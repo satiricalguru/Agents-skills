@@ -1,0 +1,32 @@
+{
+  "name": "agents-skills",
+  "version": "1.0.0",
+  "description": "A curated collection of developer agent prompts, custom coding assistant skills, specialist personas, checklists, and automation tools. Designed to optimize and extend capabilities for the Antigravity IDE, Claude, Gemini, ChatGPT, and other agentic coding environments.",
+  "main": "plugin.json",
+  "bin": {
+    "agents-skills": "./install.sh"
+  },
+  "scripts": {
+    "install-skills": "./install.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satiricalguru/Agents-skills.git"
+  },
+  "keywords": [
+    "antigravity",
+    "gemini",
+    "claude",
+    "chatgpt",
+    "agents",
+    "skills",
+    "prompts",
+    "mcp"
+  ],
+  "author": "satiricalguru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/satiricalguru/Agents-skills/issues"
+  },
+  "homepage": "https://github.com/satiricalguru/Agents-skills#readme"
+}
