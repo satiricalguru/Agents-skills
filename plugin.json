@@ -1,7 +1,7 @@
 {
   "name": "claude-skills",
   "version": "1.0.0",
-  "description": "A collection of custom agent skills and tools for Antigravity IDE and Gemini/Claude agents.",
+  "description": "A curated collection of developer agent prompts, custom coding assistant skills, specialist personas, checklists, and automation tools. Designed to optimize and extend capabilities for the Antigravity IDE, Claude, Gemini, ChatGPT, and other agentic coding environments. 🛠️",
   "author": {
     "name": "satiricalguru"
   },

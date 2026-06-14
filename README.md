@@ -1,6 +1,6 @@
 # AI Agents Skills
 
-A curated repository of custom agent skills, specialist personas, checklists, and tools designed to extend the capabilities of the **Antigravity IDE** and **Gemini / Claude / ChatGPT agentic coding assistants**.
+A curated collection of developer agent prompts, custom coding assistant skills, specialist personas, checklists, and automation tools. Designed to optimize and extend capabilities for the Antigravity IDE, Claude, Gemini, ChatGPT, and other agentic coding environments. 🛠️
 
 This repository is structured as a standard plugin, allowing you to load all contained skills at once or install specific skills individually.
 
