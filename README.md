@@ -130,7 +130,7 @@ The [`prompts/`](prompts/) directory contains a curated library of clean, date-s
 | **Llama** | [`llama 4 whatsapp prompt.txt`](prompts/llama/llama%204%20whatsapp%20prompt.txt), [`llama 5 prompt.txt`](prompts/llama/llama%205%20prompt.txt), [`llama muse spark prompt.txt`](prompts/llama/llama%20muse%20spark%20prompt.txt) |
 | **DeepSeek** | [`deepseek r1 prompt.md`](prompts/deepseek/deepseek%20r1%20prompt.md), [`deepseek v3 prompt.md`](prompts/deepseek/deepseek%20v3%20prompt.md) |
 | **GLM** | [`glm 5.1 prompt.md`](prompts/glm/glm%205.1%20prompt.md), [`glm 5 turbo prompt.md`](prompts/glm/glm%205%20turbo%20prompt.md) |
-| **Kimi** | [`kimi k2 prompt.md`](prompts/kimi/kimi%20k2%20prompt.md) |
+| **Kimi** | [`kimi k2.6 prompt.md`](prompts/kimi/kimi%20k2.6%20prompt.md) |
 | **Qwen** | [`qwen 3.6 plus prompt.md`](prompts/qwen/qwen%203.6%20plus%20prompt.md), [`qwen 3.7 plus prompt.md`](prompts/qwen/qwen%203.7%20plus%20prompt.md), [`qwen 3.7 max prompt.md`](prompts/qwen/qwen%203.7%20max%20prompt.md) |
 | **Minimax** | [`minimax prompt.txt`](prompts/minimax/minimax%20prompt.txt) |
 | **Mistral** | [`mistral le chat prompt.md`](prompts/mistral/mistral%20le%20chat%20prompt.md) |
