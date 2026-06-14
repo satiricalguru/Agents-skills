@@ -11,6 +11,7 @@ This repository is structured as a standard plugin, allowing you to load all con
 - [Available Skills](#️-available-skills)
 - [Specialist Personas](#-specialist-personas)
 - [Reference Checklists](#-reference-checklists)
+- [Curated AI Model Prompts](#-curated-ai-model-prompts)
 - [Installation](#-installation)
 - [Skill-Specific Setup](#️-skill-specific-setup)
 - [Adding New Skills](#-adding-new-skills)
@@ -112,6 +113,31 @@ Quick-reference checklists located in [`references/`](references/):
 - **[`performance-checklist.md`](references/performance-checklist.md)**: Core Web Vitals thresholds and runtime measurement commands.
 - **[`accessibility-checklist.md`](references/accessibility-checklist.md)**: WCAG 2.1 AA keyboard nav, screen readers, visual contrast, and ARIA rules.
 - **[`orchestration-patterns.md`](references/orchestration-patterns.md)**: Rules preventing nested persona loops and agent bloat.
+
+---
+
+## 📂 Curated AI Model Prompts
+
+The [`prompts/`](prompts/) directory contains a curated library of clean, date-standardized system prompts for leading AI model families. These prompts are structured without underscores (space-separated filenames) and updated to represent a current date context of **June 14, 2026**:
+
+| Model Family | Prompts |
+| :--- | :--- |
+| **Antigravity** | [`antigravity prompt.md`](prompts/antigravity/antigravity%20prompt.md) |
+| **Claude** | [`claude 4.6 sonnet prompt.txt`](prompts/claude/claude%204.6%20sonnet%20prompt.txt), [`claude 4.7 opus prompt.txt`](prompts/claude/claude%204.7%20opus%20prompt.txt), [`claude code prompt.md`](prompts/claude/claude%20code%20prompt.md) |
+| **ChatGPT** | [`chatgpt gpt 4.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%204.5%20prompt.md), [`chatgpt gpt 4o prompt.txt`](prompts/chatgpt/chatgpt%20gpt%204o%20prompt.txt), [`chatgpt gpt 5.4 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.4%20prompt.md), [`chatgpt gpt 5.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.5%20prompt.md), [`chatgpt o3 o4 mini prompt.txt`](prompts/chatgpt/chatgpt%20o3%20o4%20mini%20prompt.txt) |
+| **Gemini** | [`gemini 2.5 pro prompt.md`](prompts/gemini/gemini%202.5%20pro%20prompt.md), [`gemini 3.1 pro prompt.md`](prompts/gemini/gemini%203.1%20pro%20prompt.md), [`gemini 3.5 flash prompt.md`](prompts/gemini/gemini%203.5%20flash%20prompt.md) |
+| **Groq / Grok** | [`grok 3 prompt.md`](prompts/groq/grok%203%20prompt.md), [`grok 4.1 prompt.txt`](prompts/groq/grok%204.1%20prompt.txt), [`grok 5.0 prompt.txt`](prompts/groq/grok%205.0%20prompt.txt) |
+| **Llama** | [`llama 4 whatsapp prompt.txt`](prompts/llama/llama%204%20whatsapp%20prompt.txt), [`llama 5 prompt.txt`](prompts/llama/llama%205%20prompt.txt), [`llama muse spark prompt.txt`](prompts/llama/llama%20muse%20spark%20prompt.txt) |
+| **DeepSeek** | [`deepseek r1 prompt.md`](prompts/deepseek/deepseek%20r1%20prompt.md), [`deepseek v3 prompt.md`](prompts/deepseek/deepseek%20v3%20prompt.md) |
+| **GLM** | [`glm 4 prompt.md`](prompts/glm/glm%204%20prompt.md) |
+| **Kimi** | [`kimi k2 prompt.md`](prompts/kimi/kimi%20k2%20prompt.md) |
+| **Qwen** | [`qwen 2.5 coder prompt.md`](prompts/qwen/qwen%202.5%20coder%20prompt.md) |
+| **Minimax** | [`minimax prompt.txt`](prompts/minimax/minimax%20prompt.txt) |
+| **Mistral** | [`mistral le chat prompt.md`](prompts/mistral/mistral%20le%20chat%20prompt.md) |
+| **Perplexity** | [`perplexity deep research prompt.txt`](prompts/perplexity/perplexity%20deep%20research%20prompt.txt) |
+| **Replit** | [`replit agent prompt.md`](prompts/replit/replit%20agent%20prompt.md) |
+| **Vercel** | [`vercel v0 prompt.txt`](prompts/vercel%20vo/vercel%20v0%20prompt.txt) |
+| **Windsurf** | [`windsurf prompt.md`](prompts/windsurf/windsurf%20prompt.md), [`windsurf tools.md`](prompts/windsurf/windsurf%20tools.md) |
 
 ---
 
@@ -253,6 +279,7 @@ description: Brief description of the skill.
 ```
 .
 ├── README.md                    # This file
+├── prompts/                     # Curated AI model prompts (new)
 ├── instructions/                # Model behavioral instructions
 │   ├── jailbreak/               # Custom/jailbreak instructions
 │   │   ├── Antigravity.md
