@@ -145,9 +145,17 @@ The [`prompts/`](prompts/) directory contains a curated library of clean, date-s
 
 Choose one of the installation methods below.
 
-### Method 1: Unified Plugin (Recommended)
+### Method 1: One-Line Terminal Installer (Recommended)
 
-Installing the entire repository as a plugin automatically exposes all current and future skills to your agent.
+Run the following command in your terminal to automatically install or update all agent skills:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/satiricalguru/Agents-skills/main/install.sh | bash
+```
+
+### Method 2: Manual Unified Plugin Installation
+
+Installing the entire repository as a plugin manually automatically exposes all current and future skills to your agent:
 
 ```bash
 # Navigate to your agent's plugins directory
@@ -159,7 +167,7 @@ git clone https://github.com/satiricalguru/Agents-skills.git
 # Restart your IDE / Agent to load the plugin
 ```
 
-### Method 2: Individual Skill
+### Method 3: Individual Skill Installation
 
 Install only a specific skill into an existing plugin:
 
