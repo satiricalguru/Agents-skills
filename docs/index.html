@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agent Skills Hub — Optimize Your Coding Agent</title>
+  <!-- Tailwind CSS (for layout helper utilities if needed, custom CSS for full glow and styles) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <!-- Markdown parser library -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <div>
+        <h1>AI Agent Skills Hub</h1>
+        <p class="text-xs text-slate-500 font-medium">Equip your AI assistants with elite developer workflows</p>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search skills, commands, rules...">
+    </div>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <button class="btn" id="btnQuiz">
+        <i class="fa-solid fa-wand-magic-sparkles text-sky-400"></i>
+        <span>Recommend Skills</span>
+      </button>
+      <button class="btn btn-primary" id="btnSelectAll">
+        <i class="fa-solid fa-check-double"></i>
+        <span>Select All Core</span>
+      </button>
+      <button class="btn" id="btnClearSelection">
+        <i class="fa-solid fa-trash-can"></i>
+        <span>Clear</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Workspace Container -->
+  <div class="app-container">
+    
+    <!-- Skills workspace (Left Area) -->
+    <div class="skills-workspace">
+      
+      <!-- Primary columns matching user's screenshots -->
+      <div class="columns-grid">
+        
+        <!-- High Priority Column -->
+        <div class="column col-high" id="colHigh">
+          <div class="column-header">
+            <span class="column-indicator"></span>
+            <h2>High Priority</h2>
+          </div>
+          <p class="column-subtitle">Core Dev Workflow (Add These First)</p>
+          <div class="space-y-4" id="highSkillsContainer">
+            <!-- Dynamic skills list -->
+          </div>
+        </div>
+
+        <!-- Medium Priority Column -->
+        <div class="column col-medium" id="colMedium">
+          <div class="column-header">
+            <span class="column-indicator"></span>
+            <h2>Medium Priority</h2>
+          </div>
+          <p class="column-subtitle">Quality & Architecture (Prevent Technical Debt)</p>
+          <div class="space-y-4" id="mediumSkillsContainer">
+            <!-- Dynamic skills list -->
+          </div>
+        </div>
+
+        <!-- Situational Column -->
+        <div class="column col-situational" id="colSituational">
+          <div class="column-header">
+            <span class="column-indicator"></span>
+            <h2>Situational</h2>
+          </div>
+          <p class="column-subtitle">Use When Relevant to Your Tech Stack</p>
+          <div class="space-y-4" id="situationalSkillsContainer">
+            <!-- Dynamic skills list -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Specialized / Platform Integrations (Bottom Area) -->
+      <div class="specialized-section">
+        <h2>Specialized Integrations & Scientific Tools</h2>
+        <div class="specialized-grid" id="specializedSkillsContainer">
+          <!-- Dynamic platform/science skills list -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Compilation & Output Column (Right Sidebar) -->
+    <div class="compiler-panel">
+      <div class="compiler-header">
+        <h2>System Instructions Compiler</h2>
+        <p>Bundles chosen skills into a single high-potency agent file</p>
+      </div>
+
+      <div class="compiler-options">
+        <div class="form-group">
+          <label for="exportFormat">Target Coding Agent</label>
+          <div class="select-wrapper">
+            <select id="exportFormat" class="form-control">
+              <option value="cursor">Cursor rules (.cursorrules)</option>
+              <option value="windsurf">Windsurf rules (.windsurfrules)</option>
+              <option value="antigravity">Antigravity / Gemini Instructions (.gemini)</option>
+              <option value="claudecode">Claude Code / clauderc</option>
+              <option value="chatgpt">ChatGPT Custom Instructions</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Code Preview Box -->
+      <div class="preview-container">
+        <div class="preview-tab-header">
+          <div class="preview-tab-title" id="previewTitle">.cursorrules Preview</div>
+          <div class="flex gap-2">
+            <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-mono" id="selectedCountBadge">0 selected</span>
+          </div>
+        </div>
+        <div class="code-preview" id="codePreview" readonly>
+<!-- Generated Code Preview will render here -->
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="compiler-actions">
+        <div class="compiler-summary" id="compilerSummary">
+          No skills selected. Select skills on the left to compile.
+        </div>
+        <button class="btn btn-primary justify-center w-full py-3" id="btnCopy">
+          <i class="fa-solid fa-copy"></i>
+          <span>Copy System rules</span>
+        </button>
+        <button class="btn justify-center w-full py-2.5" id="btnDownload">
+          <i class="fa-solid fa-download"></i>
+          <span>Download Rules File</span>
+        </button>
+        
+        <!-- Windows Specific PowerShell Copy Script -->
+        <div class="mt-4 pt-4 border-t border-slate-800">
+          <h4 class="text-xs uppercase font-bold text-slate-500 mb-2">Windows Local Installer</h4>
+          <p class="text-[10px] text-slate-400 mb-2">Generate a PowerShell script to inject the selected plugins directly into your local IDE app data folder.</p>
+          <button class="btn w-full justify-center text-xs py-2 bg-slate-800 border-slate-700 hover:bg-slate-700 text-sky-400 font-semibold" id="btnPowerShell">
+            <i class="fa-brands fa-windows"></i>
+            <span>Generate PowerShell script</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Detail Inspector Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <h2 id="drawerTitle">Skill Name</h2>
+        <span class="drawer-badge" id="drawerBadge">High Priority</span>
+      </div>
+      <button class="drawer-close" id="btnDrawerClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <div class="markdown-content" id="drawerMarkdown">
+        <!-- Rendered markdown content -->
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <button class="btn" id="btnDrawerCancel">Close</button>
+      <button class="btn btn-primary" id="btnDrawerToggleSelect">
+        <i class="fa-solid fa-plus"></i>
+        <span>Add to Bundle</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Recommendation Wizard Modal -->
+  <div class="modal-backdrop" id="wizardBackdrop">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>
+          <i class="fa-solid fa-wand-magic-sparkles text-sky-400"></i>
+          <span>Agent Skill Recommender</span>
+        </h3>
+        <button class="drawer-close" id="btnWizardClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Step 1: Project Type -->
+        <div class="wizard-step active" data-step="1">
+          <div class="wizard-question">1. What is the scope/environment of this project?</div>
+          <div class="wizard-options">
+            <div class="wizard-option" data-value="production">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Production / High Stakes</p>
+                <p class="text-xs text-slate-400">User-facing database, payment handlers, strict security requirement.</p>
+              </div>
+            </div>
+            <div class="wizard-option" data-value="standard">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Standard Developer Team</p>
+                <p class="text-xs text-slate-400">Regular app features, collaboration, code reviews, staging deployments.</p>
+              </div>
+            </div>
+            <div class="wizard-option" data-value="prototype">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Prototype / Fast Hackathon</p>
+                <p class="text-xs text-slate-400">Quick iteration, building features at speed, minimal testing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Tech Stack -->
+        <div class="wizard-step" data-step="2">
+          <div class="wizard-question">2. Select the specific technologies you are using:</div>
+          <div class="wizard-options">
+            <div class="wizard-option" data-value="web">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Web Frontend & UI Development</p>
+                <p class="text-xs text-slate-400">React, Next.js, HTML, CSS, interactive pages, design system.</p>
+              </div>
+            </div>
+            <div class="wizard-option" data-value="backend">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Backend Services / APIs / Databases</p>
+                <p class="text-xs text-slate-400">MongoDB, Postgres, Supabase, Node, Python, endpoint design.</p>
+              </div>
+            </div>
+            <div class="wizard-option" data-value="mobile">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Mobile Application Development</p>
+                <p class="text-xs text-slate-400">Android SDK, iOS Xcode setups, mobile CLI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Pain Point -->
+        <div class="wizard-step" data-step="3">
+          <div class="wizard-question">3. What is your primary challenge with the agent?</div>
+          <div class="wizard-options">
+            <div class="wizard-option" data-value="quality">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Code Quality & Halting Bugs</p>
+                <p class="text-xs text-slate-400">Agent goes down wrong paths, makes wrong assumptions, breaks existing code.</p>
+              </div>
+            </div>
+            <div class="wizard-option" data-value="planning">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Planning & Breaking Down Features</p>
+                <p class="text-xs text-slate-400">Difficulty starting large changes, agent writes too much code at once.</p>
+              </div>
+            </div>
+            <div class="wizard-option" data-value="speed">
+              <span class="wizard-radio"><span class="wizard-radio-inner"></span></span>
+              <div>
+                <p class="font-bold">Speed of Coding & Automation</p>
+                <p class="text-xs text-slate-400">Git branch friction, slow setup, manual environment configuration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="btnWizardBack" disabled>Back</button>
+        <button class="btn btn-primary" id="btnWizardNext">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

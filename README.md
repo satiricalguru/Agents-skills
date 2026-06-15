@@ -2,6 +2,8 @@
 
 A curated collection of developer agent prompts, custom coding assistant skills, specialist personas, checklists, and automation tools. Designed to optimize and extend capabilities for the Antigravity IDE, Claude, Gemini, ChatGPT, and other agentic coding environments. 🛠️
 
+🚀 **[Try the Interactive Agent Skills Dashboard Live!](https://satiricalguru.github.io/Agents-skills/)** — Browse, select, and compile custom system instructions for Cursor, Windsurf, Antigravity, Claude Code, and ChatGPT in seconds.
+
 This repository is structured as a standard plugin, allowing you to load all contained skills at once or install specific skills individually.
 
 ---
