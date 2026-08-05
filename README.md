@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 AI AGENTS SKILLS
+# ✦ AI AGENTS SKILLS
 
 ### *Supercharge Your Agentic AI Coding Assistants with 85+ Production-Grade Skills, Personas & Workflows*
 
