@@ -1,6 +1,8 @@
 <div align="center">
 
-# ✦ AI AGENTS SKILLS
+<img src="docs/icon.png" width="100" alt="AI Agents Skills Icon" />
+
+# AI AGENTS SKILLS
 
 ### *Supercharge Your Agentic AI Coding Assistants with 85+ Production-Grade Skills, Personas & Workflows*
 
