@@ -1,23 +1,56 @@
-# AI Agents Skills
+<div align="center">
 
-A curated collection of developer agent prompts, custom coding assistant skills, specialist personas, checklists, and automation tools. Designed to optimize and extend capabilities for the Antigravity IDE, Claude, Gemini, ChatGPT, and other agentic coding environments. 🛠️
+# 🤖 AI AGENTS SKILLS
 
-🚀 **[Try the Interactive Agent Skills Dashboard Live!](https://satiricalguru.github.io/Agents-skills/)** — Browse, select, and compile custom system instructions for Cursor, Windsurf, Antigravity, Claude Code, and ChatGPT in seconds.
+### *Supercharge Your Agentic AI Coding Assistants with 85+ Production-Grade Skills, Personas & Workflows*
 
-This repository is structured as a standard plugin, allowing you to load all contained skills at once or install specific skills individually.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/satiricalguru/Agents-skills/pulls)
+[![Antigravity Compatible](https://img.shields.io/badge/Antigravity-IDE-blueviolet.svg)](#-installation)
+[![Claude Code Ready](https://img.shields.io/badge/Claude--Code-Ready-orange.svg)](#-installation)
+[![Cursor / Windsurf](https://img.shields.io/badge/Cursor%20%2F%20Windsurf-Supported-00d2ff.svg)](#-installation)
+[![Skills Count](https://img.shields.io/badge/Skills-85%2B%20Available-ff69b4.svg)](#%EF%B8%8F-available-skills)
+
+<br/>
+
+> 🚀 **[TRY THE INTERACTIVE DASHBOARD LIVE!](https://satiricalguru.github.io/Agents-skills/)**
+> 
+> *Browse, mix, and compile custom system instructions for Antigravity IDE, Claude Code, Cursor, Windsurf, and ChatGPT in seconds!*
+
+</div>
+
+---
+
+<div align="center">
+
+### 💡 Why AI Agents Skills?
+
+| 🛠️ **85+ Specialized Skills** | 👥 **4+ Expert Personas** | 📂 **Curated 2026 Prompts** | ⚡ **1-Command Install** |
+| :--- | :--- | :--- | :--- |
+| Modular workflows for TDD, Security, Web Scraping, DevTools & Science | Senior Staff Reviewer, QA Specialist, & Security Auditor personas | Raw system prompts for Antigravity, Claude 4.7, GPT-5.5 & Gemini 3.5 | Single `curl` script or `npx` command to equip your local agent |
+
+</div>
 
 ---
 
 ## 📑 Table of Contents
 
 - [Available Skills](#️-available-skills)
+  - [Meta & General Execution](#meta--general-execution)
+  - [Define - Clarify what to build](#define---clarify-what-to-build)
+  - [Plan - Break it down](#plan---break-it-down)
+  - [Build - Write the code](#build---write-the-code)
+  - [Verify - Prove it works](#verify---prove-it-works)
+  - [Review - Quality gates before merge](#review---quality-gates-before-merge)
+  - [Ship - Deploy with confidence](#ship---deploy-with-confidence)
+  - [Specialized Tools & Systems](#specialized-tools--systems)
 - [Specialist Personas](#-specialist-personas)
 - [Reference Checklists](#-reference-checklists)
 - [Curated AI Model Prompts](#-curated-ai-model-prompts)
 - [Installation](#-installation)
 - [Skill-Specific Setup](#️-skill-specific-setup)
 - [Adding New Skills](#-adding-new-skills)
-- [Repository Structure](#-repository-structure)
+- [Global System Skills](#-global-system-skills)
 
 ---
 
@@ -90,6 +123,7 @@ This repository is structured as a standard plugin, allowing you to load all con
 | **[`mongodb`](skills/mongodb.md)** | Model data, connect, write updates, index schemas, run aggregations, and perform Atlas/Vector search in MongoDB. | Mongoose models, update operators, ESR indexes, multi-document transactions, Atlas search |
 | **[`reverse-engineering-skill`](skills/reverse-engineering-skill.md)** | Binary analysis, firmware extraction, vulnerability research, and CTF solvers. | Ghidra MCP, radare2-mcp, angr symbolic execution, class-dump, jadx, checksec |
 | **[`supabase`](skills/supabase.md)** | Integrate, query, manage migrations, TypeScript type generation, and configure RLS on Supabase. | Postgres migrations, RLS security, Next.js SSR cookie auth, Edge Functions, pgvector |
+| **[`web-scraper`](skills/web-scraper.md)** | Adaptive web scraping with traffic interception, framework detection, anti-blocking, and Apify Actor creation. | Traffic interception, cURL recon, Playwright/Puppeteer signatures, Apify SDK |
 
 ---
 
