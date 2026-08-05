@@ -38,7 +38,8 @@ const screenshotMapping = {
   'doubt-driven-development': { category: 'situational', priority: 8, why: 'Adversarial review of in-flight decisions — use on high-stakes/production changes' },
   'xcode-project-setup': { category: 'situational', priority: 9, why: 'iOS/macOS development only' },
   'android-cli': { category: 'situational', priority: 10, why: 'Android development only' },
-  'uv': { category: 'situational', priority: 11, why: 'If you use Python — fast package manager workflow' }
+  'uv': { category: 'situational', priority: 11, why: 'If you use Python — fast package manager workflow' },
+  'web-scraper': { category: 'situational', priority: 12, why: 'Intelligent adaptive web scraping, traffic interception, anti-blocking, and Apify Actor creation' }
 };
 
 // Parse a single Markdown file with frontmatter
