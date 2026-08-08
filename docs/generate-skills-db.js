@@ -56,7 +56,7 @@ function parseMarkdownFile(filePath) {
 
   let rawContent = content;
 
-  // Simple Frontmatter Parser
+  // Frontmatter Parser (supports quoted values and YAML block scalars: |, >, |-, >-)
   if (content.startsWith('---')) {
     const parts = content.split('---');
     if (parts.length >= 3) {
@@ -64,17 +64,52 @@ function parseMarkdownFile(filePath) {
       rawContent = parts.slice(2).join('---').trim();
 
       const lines = frontmatterText.split('\n');
+      let blockKey = null;
+      let blockStyle = null;
+      const blockLines = [];
+
+      const commitBlock = () => {
+        if (blockKey === null) return;
+        let text = blockLines.map(l => l.replace(/^[ \t]+/, '')).join('\n');
+        if (blockStyle.startsWith('>')) {
+          text = text.replace(/[ \t]*\n[ \t]*/g, ' ');
+        }
+        if (blockStyle.endsWith('-')) {
+          text = text.trim();
+        } else if (!blockStyle.endsWith('+')) {
+          text = text.replace(/\n+$/, '');
+        }
+        if (blockKey === 'name') metadata.name = text;
+        if (blockKey === 'description') metadata.description = text;
+        blockKey = null;
+        blockStyle = null;
+        blockLines.length = 0;
+      };
+
       lines.forEach(line => {
+        if (blockKey !== null) {
+          if (/^[ \t]/.test(line) || line.trim() === '') {
+            blockLines.push(line);
+            return;
+          }
+          commitBlock();
+        }
         const colonIndex = line.indexOf(':');
         if (colonIndex > -1) {
           const key = line.slice(0, colonIndex).trim();
           const val = line.slice(colonIndex + 1).trim();
+          if (/^[|>][+-]?$/.test(val)) {
+            blockKey = key;
+            blockStyle = val;
+            return;
+          }
           // Clean quotes if present
           const cleanedVal = val.replace(/^["']|["']$/g, '').trim();
           if (key === 'name') metadata.name = cleanedVal;
           if (key === 'description') metadata.description = cleanedVal;
         }
       });
+      commitBlock();
     }
   }
 

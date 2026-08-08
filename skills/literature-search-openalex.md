@@ -118,13 +118,13 @@ download a PDF, verify it is not empty or corrupted.
 
 Consult `references/` for valid filter, sort, and group-by fields per entity:
 
--   [Works](references/works.md) — [Authors](references/authors.md) —
-    [Sources](references/sources.md)
--   [Institutions](references/institutions.md) — [Topics](references/topics.md)
-    — [Taxonomy](references/taxonomy.md)
--   [Geo & Language](references/geo_and_language.md) —
-    [Publishers & Funders](references/publishers_funders.md)
--   [Type Values](references/type_values.md)
+-   Works — Authors —
+    Sources
+-   Institutions — Topics
+    — Taxonomy
+-   Geo & Language —
+    Publishers & Funders
+-   Type Values
 
 ## Common Workflows
 

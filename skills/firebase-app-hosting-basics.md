@@ -43,7 +43,7 @@ This is the recommended flow for most users.
       }
     }
     ```
-2. Create or edit `apphosting.yaml`- see [Configuration](references/configuration.md) for more information on how to do so.
+2. Create or edit `apphosting.yaml`- see Configuration for more information on how to do so.
 3. If the app needs safe access to sensitive keys, use `npx -y firebase-tools@latest apphosting:secrets` commands to set and grant access to secrets.
 4. Run `npx -y firebase-tools@latest deploy` when you are ready to deploy.
 
@@ -51,8 +51,8 @@ This is the recommended flow for most users.
 
 Alternatively, set up a backend connected to a GitHub repository for automated deployments "git push" deployments.
 This is only recommended for more advanced users, and is not required to use App Hosting.
-See [CLI Commands](references/cli_commands.md) for more information on how to set this up using CLI commands.
+See CLI Commands for more information on how to set this up using CLI commands.
 
 ## Emulation
 
-See [Emulation](references/emulation.md) for more information on how to test your app locally using the Firebase Local Emulator Suite.
+See Emulation for more information on how to test your app locally using the Firebase Local Emulator Suite.

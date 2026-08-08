@@ -122,12 +122,12 @@ uv run --project $SKILL_DIR /tmp/my_analysis.py --arg1 val1
 
 ## References
 
--   [alphagenome-api.md](docs/alphagenome-api.md) — API reference and code
+-   alphagenome-api.md — API reference and code
     patterns
--   [interpretation-guide.md](docs/interpretation-guide.md) — Interpretation
+-   interpretation-guide.md — Interpretation
     guide, score magnitude rules, ISM, and checklist.
--   [report-templates.md](docs/report-templates.md) — Full report templates
--   [`scripts/visualize_variant_effects.py`](scripts/visualize_variant_effects.py)
+-   report-templates.md — Full report templates
+-   `scripts/visualize_variant_effects.py`
     — Single-variant visualization template (Ref/Alt comparisons, Splicing).
     -   **Splicing Zoom Strategy**: Uses a **Hybrid Approach** for optimal
         visibility:
@@ -140,20 +140,20 @@ uv run --project $SKILL_DIR /tmp/my_analysis.py --arg1 val1
             junctions are fully visible. *Lesson*: Simple fixed windows (e.g.,
             2kb) or nearest-exon logic often fail for skipping events. Always
             use the *observed junction data* to drive zoom levels.
--   [`examples/splicing/`](docs/examples/splicing/) — Splicing analysis examples
--   [`examples/model_limitation_RNU4ATAC/`](docs/examples/model_limitation_RNU4ATAC/)
+-   `examples/splicing/` — Splicing analysis examples
+-   `examples/model_limitation_RNU4ATAC/`
     — ncRNA structure limitation case study
--   [`examples/polyadenylation_HBA2/`](docs/examples/polyadenylation_HBA2/) — 3'
+-   `examples/polyadenylation_HBA2/` — 3'
     UTR / Polyadenylation case study
--   [`examples/regulatory/`](docs/examples/regulatory/) — Regulatory variant
+-   `examples/regulatory/` — Regulatory variant
     examples
--   [`examples/negative_result_GATA4/`](docs/examples/negative_result_GATA4/) —
+-   `examples/negative_result_GATA4/` —
     Negative results (mathematical artefact)
--   [`examples/negative_result_TGFB3/`](docs/examples/negative_result_TGFB3/) —
+-   `examples/negative_result_TGFB3/` —
     Negative results (proxies)
--   [`scripts/lookup_gene_info.py`](scripts/lookup_gene_info.py) — Gene &
+-   `scripts/lookup_gene_info.py` — Gene &
     transcript lookup
--   [`scripts/resolve_ontology_terms.py`](scripts/resolve_ontology_terms.py) —
+-   `scripts/resolve_ontology_terms.py` —
     Ontology term resolution (UBERON/CL IDs)
 
 --------------------------------------------------------------------------------
@@ -234,7 +234,7 @@ Variant Analysis Progress:
 - [ ] Step 2: Parse User Query & Research
 - [ ] Step 3: Resolve Tissues & Modalities
 - [ ] Step 4: Visualize & Save Plots
-- [ ] Step 5: Analyze Predictions (view plots, no code). MANDATORY: Read [interpretation-guide.md](docs/interpretation-guide.md) before interpreting results.
+- [ ] Step 5: Analyze Predictions (view plots, no code). MANDATORY: Read interpretation-guide.md before interpreting results.
 - [ ] Step 6: Write Report, save it as `report.md` (MANDATORY)
 - [ ] Step 7: Self-Critique (view `report.md` to verify links & claims)
 - [ ] Step 8: Make artifact out of `report.md`

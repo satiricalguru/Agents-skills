@@ -50,15 +50,15 @@ uv run scripts/string_cli.py <command> [options] --output /tmp/out.tsv
 
 Read the following reference files based on the user's request:
 
-*   **[Mapping Identifiers](references/mapping.md)** - Map common protein names
+*   **Mapping Identifiers** - Map common protein names
     to STRING IDs.
-*   **[Interactions & Network](references/interactions.md)** - Find interacting
+*   **Interactions & Network** - Find interacting
     proteins, network topologies, mediators, homology, and visual network
     images.
-*   **[Enrichment & Functional Annotations](references/enrichment.md)** -
+*   **Enrichment & Functional Annotations** -
     Analyze pathway enrichment (GO, KEGG, Pfam), PPI significance, or find all
     proteins associated with a specific term (e.g. Melanoma).
-*   **[Values/Ranks Enrichment](references/valuesranks.md)** - Submit full
+*   **Values/Ranks Enrichment** - Submit full
     experimental datasets (e.g., logFC, p-values) for rank-based enrichment
     analysis using the async background API.
 

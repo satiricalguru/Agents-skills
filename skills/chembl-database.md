@@ -264,7 +264,7 @@ uv run scripts/chembl_api.py <subcommand> --output <file> [--id ID | --ids ID1;I
 ## Reference
 
 -   **API Endpoints Reference**: See
-    [references/api_endpoints.md](references/api_endpoints.md) for the full list
+    references/api_endpoints.md for the full list
     of endpoints and filter operators.
 
 ## Workflow

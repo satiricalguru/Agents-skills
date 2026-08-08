@@ -55,7 +55,7 @@ installing them (including `pymol-open-source-whl`) when the script is executed.
 -   **Init boilerplate is mandatory.** Every PyMOL script must begin with the
     initialization sequence. `from pymol import cmd` must come after
     `finish_launching()`, not before.
--   See [references/PYMOL_REFERENCE.md](references/PYMOL_REFERENCE.md) for
+-   See references/PYMOL_REFERENCE.md for
     selection syntax, common commands, and gotchas.
 -   **Pre-Flight File Check**: Before writing the PyMOL script or running it,
     you MUST verify that the requested structure file actually exists on the
@@ -109,7 +109,7 @@ cmd.quit()
 
 ## Common Recipes
 
-See [references/RECIPES.md](references/RECIPES.md) for complete, copy-paste
+See references/RECIPES.md for complete, copy-paste
 ready recipes. Available recipes:
 
 -   **Cartoon with secondary structure coloring** — basic helix/sheet/loop

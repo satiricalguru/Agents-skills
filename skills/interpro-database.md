@@ -121,7 +121,7 @@ returns a 404 error.
 ## Quick Reference / Core Endpoints & Parameters
 
 **For a complete, exhaustive list of all query parameters, see the
-[Full API Reference](references/api_reference.md).**
+Full API Reference.**
 
 The API is fully open and supports 6 core endpoints. You can combine them using
 the linked parameters described above. Below is a nested list of the specific
@@ -139,7 +139,7 @@ query parameters available for each endpoint:
     *   `extra_fields`: Request additional data (e.g., `counters` for match
         coordinates).
     *   `group_by` / `sort_by`: Aggregate or sort results *(valid values depend
-        on context, see [Full API Reference](references/api_reference.md))*.
+        on context, see Full API Reference)*.
     *   *Example*: `uv run ./scripts/interpro_client.py count entry --source_db
         pfam --query_params type=domain --output count.jsonl`
 
@@ -396,7 +396,7 @@ results = fetch_interpro_data(
 
 **For detailed examples of the invocations and JSON output schemas returned by
 various endpoints, see the
-[Example Responses Reference](references/example_responses.tsv).** This TSV
+Example Responses Reference.** This TSV
 contains command-line calls, Python equivalents, and the corresponding JSON
 payload structures.
 

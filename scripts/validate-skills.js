@@ -48,6 +48,7 @@ const SECTION_EXEMPT_SKILLS = {
   'idea-refine':        'Legacy structure predating skill-anatomy.md — uses How-It-Works/Usage/Anti-patterns instead of standard headings. Tracked for conformance in https://github.com/satiricalguru/Agents-skills/issues',
   'no-excuses-executor': 'Custom skill — direct execution mode with custom layout.',
   'reverse-engineering-skill': 'Custom skill — binary analysis with specialized phase-based layout.',
+  'web-scraper':            'Custom skill — strategy-selection layout (When This Skill Activates) instead of standard anatomy headings.',
 };
 
 const IMPORTED_GLOBAL_SKILLS = new Set([
@@ -88,6 +89,7 @@ const IMPORTED_GLOBAL_SKILLS = new Set([
   'literature-search-openalex',
   'memory-leak-debugging',
   'modern-web-guidance',
+  'mongodb',
   'ncbi-sequence-fetch',
   'openfda-database',
   'opentargets-database',
@@ -101,6 +103,7 @@ const IMPORTED_GLOBAL_SKILLS = new Set([
   'reactome-database',
   'science-skills-common',
   'string-database',
+  'supabase',
   'troubleshooting',
   'ucsc-conservation-and-tfbs',
   'unibind-database',
@@ -138,13 +141,50 @@ function parseFrontmatter(content) {
   if (!match) return null;
 
   const result = {};
-  for (const line of match[1].split(/\r?\n/)) {
+  const lines = match[1].split(/\r?\n/);
+
+  let blockKey = null;
+  let blockStyle = null;
+  const blockLines = [];
+
+  const commitBlock = () => {
+    if (blockKey === null) return;
+    let text = blockLines.map(l => l.replace(/^[ \t]+/, '')).join('\n');
+    if (blockStyle.startsWith('>')) {
+      text = text.replace(/[ \t]*\n[ \t]*/g, ' ');
+    }
+    if (blockStyle.endsWith('-')) {
+      text = text.trim();
+    } else if (!blockStyle.endsWith('+')) {
+      text = text.replace(/\n+$/, '');
+    }
+    result[blockKey] = text;
+    blockKey = null;
+    blockStyle = null;
+    blockLines.length = 0;
+  };
+
+  for (const line of lines) {
+    if (blockKey !== null) {
+      if (/^[ \t]/.test(line) || line.trim() === '') {
+        blockLines.push(line);
+        continue;
+      }
+      commitBlock();
+    }
     const colonIdx = line.indexOf(':');
     if (colonIdx === -1) continue;
-    const key   = line.slice(0, colonIdx).trim();
-    const value = line.slice(colonIdx + 1).trim().replace(/^['"]|['"]$/g, '');
-    if (key) result[key] = value;
+    const key = line.slice(0, colonIdx).trim();
+    const value = line.slice(colonIdx + 1).trim();
+    if (/^[|>][+-]?$/.test(value)) {
+      blockKey = key;
+      blockStyle = value;
+      continue;
+    }
+    if (key) result[key] = value.replace(/^['"]|['"]$/g, '');
   }
+  commitBlock();
+
   return result;
 }
 

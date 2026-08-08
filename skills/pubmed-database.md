@@ -158,13 +158,13 @@ When processing larger result sets (>10 abstracts):
 > you call a function without first reading its reference, you **will** produce
 > incorrect invocations.
 
-### [Search](references/search-and-discovery.md)
+### Search
 
 -   `search_pubmed`: Find PMIDs matching a free-text or structured NCBI query.
 -   `global_database_discovery`: Count how many records match a query across
     every NCBI database.
 
-### [Fetch & Resolve](references/fetch-and-resolve.md)
+### Fetch & Resolve
 
 -   `fetch_article_abstracts`: Retrieve metadata and abstracts for a batch of
     PMIDs.
@@ -172,14 +172,14 @@ When processing larger result sets (>10 abstracts):
 -   `fetch_database_summary`: Resolve opaque UIDs from any NCBI database into
     human-readable metadata.
 
-### [Cross-Database Linking](references/cross-database-linking.md)
+### Cross-Database Linking
 
 -   `find_linked_biological_data`: Find records in other NCBI databases linked
     to a source record.
 -   `discover_available_links`: List all available ELink linknames for a given
     record.
 
-### [Bulk Workflows](references/bulk-workflows.md)
+### Bulk Workflows
 
 When working with **more than ~10 PMIDs**, avoid processing IDs one-by-one.
 Upload them to the NCBI History Server via `cache_results_history` to get a
@@ -193,7 +193,7 @@ resolution, and bulk retrieval with data slimming).
 -   `cache_results_history`: Upload PMIDs to the NCBI History Server for bulk
     retrieval.
 
-### [Utilities](references/utilities.md)
+### Utilities
 
 -   `verify_medical_spelling`: Spell-check biomedical terms before searching.
 -   `match_raw_citations`: Resolve incomplete bibliographic citations to PMIDs.

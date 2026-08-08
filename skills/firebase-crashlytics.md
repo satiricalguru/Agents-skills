@@ -16,8 +16,8 @@ Provisioning Crashlytics requires both a Firebase project and a Firebase app, ei
 
 To learn how to setup Crashlytics in your application code, choose your platform:
 
-*   **Android**: [android_setup.md](references/android_setup.md)
-*   **iOS**: [ios_setup.md](references/ios_setup.md)
+*   **Android**: android_setup.md
+*   **iOS**: ios_setup.md
 
 ## SDK Usage
 

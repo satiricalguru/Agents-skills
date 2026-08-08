@@ -933,10 +933,6 @@ def generate_report(file_path: str) -> str:
     return _j(report)
 
 
-if __name__ == "__main__":
-    mcp.run()
-
-
 # ─────────────────────────────────────────────
 # NEW TOOLS (v2 — merged from plurigrid/asi)
 # ─────────────────────────────────────────────
@@ -1465,3 +1461,5 @@ def run_angr_analysis(file_path: str, mode: str = "cfg", find_addr: str = "",
                "note": "If angr not installed: pip install angr"})
 
 
+if __name__ == "__main__":
+    mcp.run()

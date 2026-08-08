@@ -1,7 +1,6 @@
 ---
-name: web-scraping
+name: web-scraper
 description: This skill activates for web scraping and Actor development. It proactively discovers APIs via traffic interception, recommends optimal strategy (traffic interception/sitemap/API/DOM scraping/hybrid), and implements iteratively. For production, it guides TypeScript Actor creation via Apify CLI.
-license: MIT
 ---
 
 # Web Scraping with Intelligent Strategy Selection
@@ -13,8 +12,8 @@ Activate automatically when user requests:
 - "Extract data from [site]"
 - "Get product information from [URL]"
 - "Find all links/pages on [site]"
-- "I'm getting blocked" or "Getting 403 errors" (loads `strategies/anti-blocking.md`)
-- "Make this an Apify Actor" (loads `apify/` subdirectory)
+- "I'm getting blocked" or "Getting 403 errors" (loads `web-scraper/strategies/anti-blocking.md`)
+- "Make this an Apify Actor" (loads `web-scraper/apify/` subdirectory)
 - "Productionize this scraper"
 
 ## Input Parsing
@@ -33,7 +32,7 @@ Default is Standard mode. Escalate to Full if protection signals appear during a
 
 This skill uses an adaptive phased workflow with quality gates. Each gate asks **"Do I have enough?"** — continue only when the answer is no.
 
-**See**: `strategies/framework-signatures.md` for framework detection tables referenced throughout.
+**See**: `web-scraper/strategies/framework-signatures.md` for framework detection tables referenced throughout.
 
 ### Phase 0: QUICK ASSESSMENT (curl, no browser)
 
@@ -45,16 +44,16 @@ curl -s -D- -L "https://target.com/page" -o response.html
 ```
 
 **Step 0b: Check response headers**
-- Match headers against `strategies/framework-signatures.md` → Response Header Signatures table
+- Match headers against `web-scraper/strategies/framework-signatures.md` → Response Header Signatures table
 - Note `Server`, `X-Powered-By`, `X-Shopify-Stage`, `Set-Cookie` (protection markers)
 - Check HTTP status code (200 = accessible, 403 = protected, 3xx = redirects)
 
 **Step 0c: Check Known Major Sites table**
-- Match domain against `strategies/framework-signatures.md` → Known Major Sites
+- Match domain against `web-scraper/strategies/framework-signatures.md` → Known Major Sites
 - If matched: use the specified data strategy, skip generic pattern scanning
 
 **Step 0d: Detect framework from HTML**
-- Search raw HTML for signatures in `strategies/framework-signatures.md` → HTML Signatures table
+- Search raw HTML for signatures in `web-scraper/strategies/framework-signatures.md` → HTML Signatures table
 - Look for `__NEXT_DATA__`, `__NUXT__`, `ld+json`, `/wp-content/`, `data-reactroot`
 
 **Step 0e: Search for target data points**
@@ -66,7 +65,7 @@ curl -s -D- -L "https://target.com/page" -o response.html
 - 403/503 status, Cloudflare challenge HTML, CAPTCHA elements, `cf-ray` header
 - Record for Phase 4 decision
 
-**See**: `strategies/cheerio-vs-browser-test.md` for the Cheerio viability assessment
+**See**: `web-scraper/strategies/cheerio-vs-browser-test.md` for the Cheerio viability assessment
 
 > **QUALITY GATE A**: All target data points found in raw HTML + no protection signals?
 > → YES: Skip to Phase 3 (Validate Findings). No browser needed.
@@ -90,7 +89,7 @@ Launch browser only for data points missing from raw HTML or when JavaScript ren
 
 **Step 1c: Search rendered DOM for missing data points**
 - For each data point NOT found in Phase 0: search rendered DOM
-- Use framework-specific search strategy from `strategies/framework-signatures.md` → Framework → Search Strategy table
+- Use framework-specific search strategy from `web-scraper/strategies/framework-signatures.md` → Framework → Search Strategy table
 - Only search patterns relevant to the detected framework
 
 **Step 1d: Inspect discovered endpoints**
@@ -133,7 +132,7 @@ Targeted investigation for data points not yet found. Only search for what's mis
 
 Every claimed extraction method must be verified. A data point is not "found" until the extraction path is specified and tested.
 
-**See**: `strategies/cheerio-vs-browser-test.md` for validation methodology
+**See**: `web-scraper/strategies/cheerio-vs-browser-test.md` for validation methodology
 
 **Step 3a: Validate CSS selectors**
 - For each Cheerio/selector-based method: confirm the selector matches actual HTML
@@ -156,7 +155,7 @@ Every claimed extraction method must be verified. A data point is not "found" un
 
 ### Phase 4: PROTECTION TESTING (conditional)
 
-**See**: `strategies/proxy-escalation.md` for complete skip/run decision logic
+**See**: `web-scraper/strategies/proxy-escalation.md` for complete skip/run decision logic
 
 **Skip Phase 4 when ALL true**:
 - No protection signals detected in Phases 0-2
@@ -196,15 +195,15 @@ curl -s -o /dev/null -w "%{http_code}" "https://target.com/page"
 
 Generate the intelligence report, then critically review it for gaps.
 
-**See**: `reference/report-schema.md` for complete report format
+**See**: `web-scraper/reference/report-schema.md` for complete report format
 
 **Step 5a: Generate report**
-- Follow `reference/report-schema.md` schema (Sections 1-6)
+- Follow `web-scraper/reference/report-schema.md` schema (Sections 1-6)
 - Include `Validated?` status for every strategy (YES / PARTIAL / NO)
 - Include all discovered endpoints with full specs
 
 **Step 5b: Self-critique**
-- Write Section 7 (Self-Critique) per `reference/report-schema.md`:
+- Write Section 7 (Self-Critique) per `web-scraper/reference/report-schema.md`:
   - **Gaps**: Data points not found — why, and what would find them
   - **Skipped steps**: Which phases skipped, with quality gate reasoning
   - **Unvalidated claims**: Anything marked PARTIAL or NO
@@ -219,7 +218,7 @@ Generate the intelligence report, then critically review it for gaps.
 
 **Step 5d: Record session** (if browser was used)
 - `proxy_session_start(name)` → `proxy_session_stop(session_id)` → `proxy_export_har(session_id, path)`
-- HAR file captures all traffic for replay. See `strategies/session-workflows.md`
+- HAR file captures all traffic for replay. See `web-scraper/strategies/session-workflows.md`
 
 ---
 
@@ -235,7 +234,7 @@ After reconnaissance report is accepted, implement scraper iteratively.
 5. Handle blocking if encountered
 6. Add robustness (error handling, retries, logging)
 
-**See**: `workflows/implementation.md` for complete implementation patterns and code examples
+**See**: `web-scraper/workflows/implementation.md` for complete implementation patterns and code examples
 
 ### PRODUCTIONIZATION (on request)
 
@@ -251,32 +250,32 @@ Convert scraper to production-ready Apify Actor.
 
 **Note**: During development, proxy-mcp provides reconnaissance and traffic analysis. For production Actors, use Crawlee crawlers (CheerioCrawler/PlaywrightCrawler) on Apify infrastructure.
 
-**See**: `workflows/productionization.md` for complete workflow and `apify/` for Actor development guides
+**See**: `web-scraper/workflows/productionization.md` for complete workflow and `web-scraper/apify/` for Actor development guides
 
 ## Quick Reference
 
 | Task | Pattern/Command | Documentation |
 |------|----------------|---------------|
-| **Reconnaissance** | **Adaptive Phases 0-5** | **`workflows/reconnaissance.md`** |
-| Framework detection | Header + HTML signature matching | `strategies/framework-signatures.md` |
-| Cheerio vs Browser | Three-way test + early exit | `strategies/cheerio-vs-browser-test.md` |
-| Traffic analysis | `proxy_list_traffic()` + `proxy_get_exchange()` | `strategies/traffic-interception.md` |
-| Protection testing | Conditional escalation | `strategies/proxy-escalation.md` |
-| Report format | Sections 1-7 with self-critique | `reference/report-schema.md` |
-| Find sitemaps | `RobotsFile.find(url)` | `strategies/sitemap-discovery.md` |
-| Filter sitemap URLs | `RequestList + regex` | `reference/regex-patterns.md` |
-| Discover APIs | Traffic capture (automatic) | `strategies/api-discovery.md` |
-| DOM scraping | DevTools bridge + humanizer | `strategies/dom-scraping.md` |
-| HTTP scraping | `CheerioCrawler` | `strategies/cheerio-scraping.md` |
-| Hybrid approach | Sitemap + API | `strategies/hybrid-approaches.md` |
-| Handle blocking | Stealth mode + upstream proxies | `strategies/anti-blocking.md` |
-| Session recording | `proxy_session_start()` / `proxy_export_har()` | `strategies/session-workflows.md` |
-| Proxy-MCP tools | Complete reference | `reference/proxy-tool-reference.md` |
-| Fingerprint configs | Stealth + TLS presets | `reference/fingerprint-patterns.md` |
-| Create Apify Actor | `apify create` | `apify/cli-workflow.md` |
-| Template selection | Cheerio vs Playwright | `workflows/productionization.md` |
-| Input schema | `.actor/input_schema.json` | `apify/input-schemas.md` |
-| Deploy actor | `apify push` | `apify/deployment.md` |
+| **Reconnaissance** | **Adaptive Phases 0-5** | **`web-scraper/workflows/reconnaissance.md`** |
+| Framework detection | Header + HTML signature matching | `web-scraper/strategies/framework-signatures.md` |
+| Cheerio vs Browser | Three-way test + early exit | `web-scraper/strategies/cheerio-vs-browser-test.md` |
+| Traffic analysis | `proxy_list_traffic()` + `proxy_get_exchange()` | `web-scraper/strategies/traffic-interception.md` |
+| Protection testing | Conditional escalation | `web-scraper/strategies/proxy-escalation.md` |
+| Report format | Sections 1-7 with self-critique | `web-scraper/reference/report-schema.md` |
+| Find sitemaps | `RobotsFile.find(url)` | `web-scraper/strategies/sitemap-discovery.md` |
+| Filter sitemap URLs | `RequestList + regex` | `web-scraper/reference/regex-patterns.md` |
+| Discover APIs | Traffic capture (automatic) | `web-scraper/strategies/api-discovery.md` |
+| DOM scraping | DevTools bridge + humanizer | `web-scraper/strategies/dom-scraping.md` |
+| HTTP scraping | `CheerioCrawler` | `web-scraper/strategies/cheerio-scraping.md` |
+| Hybrid approach | Sitemap + API | `web-scraper/strategies/hybrid-approaches.md` |
+| Handle blocking | Stealth mode + upstream proxies | `web-scraper/strategies/anti-blocking.md` |
+| Session recording | `proxy_session_start()` / `proxy_export_har()` | `web-scraper/strategies/session-workflows.md` |
+| Proxy-MCP tools | Complete reference | `web-scraper/reference/proxy-tool-reference.md` |
+| Fingerprint configs | Stealth + TLS presets | `web-scraper/reference/fingerprint-patterns.md` |
+| Create Apify Actor | `apify create` | `web-scraper/apify/cli-workflow.md` |
+| Template selection | Cheerio vs Playwright | `web-scraper/workflows/productionization.md` |
+| Input schema | `.actor/input_schema.json` | `web-scraper/apify/input-schemas.md` |
+| Deploy actor | `apify push` | `web-scraper/apify/deployment.md` |
 
 ## Common Patterns
 
@@ -303,7 +302,7 @@ await crawler.addRequests(urls);
 await crawler.run();
 ```
 
-See `examples/sitemap-basic.js` for complete example.
+See `web-scraper/examples/sitemap-basic.js` for complete example.
 
 ### Pattern 2: API-Based Scraping
 
@@ -322,7 +321,7 @@ for (const id of productIds) {
 }
 ```
 
-See `examples/api-scraper.js` for complete example.
+See `web-scraper/examples/api-scraper.js` for complete example.
 
 ### Pattern 3: Hybrid (Sitemap + API)
 
@@ -346,7 +345,7 @@ for (const id of productIds) {
 }
 ```
 
-See `examples/hybrid-sitemap-api.js` for complete example.
+See `web-scraper/examples/hybrid-sitemap-api.js` for complete example.
 
 ## Directory Navigation
 
@@ -355,60 +354,60 @@ This skill uses **progressive disclosure** - detailed information is organized i
 ### Workflows (Implementation Patterns)
 **For**: Step-by-step workflow guides for each phase
 
-- `workflows/reconnaissance.md` - **Phase 1 interactive reconnaissance (CRITICAL)**
-- `workflows/implementation.md` - Phase 4 iterative implementation patterns
-- `workflows/productionization.md` - Phase 5 Apify Actor creation workflow
+- `web-scraper/workflows/reconnaissance.md` - **Phase 1 interactive reconnaissance (CRITICAL)**
+- `web-scraper/workflows/implementation.md` - Phase 4 iterative implementation patterns
+- `web-scraper/workflows/productionization.md` - Phase 5 Apify Actor creation workflow
 
 ### Strategies (Deep Dives)
 **For**: Detailed guides on specific scraping approaches
 
-- `strategies/framework-signatures.md` - **Framework detection lookup tables (Phase 0/1)**
-- `strategies/cheerio-vs-browser-test.md` - **Cheerio vs Browser decision test with early exit**
-- `strategies/proxy-escalation.md` - **Protection testing skip/run conditions (Phase 4)**
-- `strategies/traffic-interception.md` - Traffic interception via MITM proxy
-- `strategies/sitemap-discovery.md` - Complete sitemap guide (4 patterns)
-- `strategies/api-discovery.md` - Finding and using APIs
-- `strategies/dom-scraping.md` - DOM scraping via DevTools bridge
-- `strategies/cheerio-scraping.md` - HTTP-only scraping
-- `strategies/hybrid-approaches.md` - Combining strategies
-- `strategies/anti-blocking.md` - Multi-layer anti-detection (stealth, humanizer, proxies, TLS)
-- `strategies/session-workflows.md` - Session recording, HAR export, replay
+- `web-scraper/strategies/framework-signatures.md` - **Framework detection lookup tables (Phase 0/1)**
+- `web-scraper/strategies/cheerio-vs-browser-test.md` - **Cheerio vs Browser decision test with early exit**
+- `web-scraper/strategies/proxy-escalation.md` - **Protection testing skip/run conditions (Phase 4)**
+- `web-scraper/strategies/traffic-interception.md` - Traffic interception via MITM proxy
+- `web-scraper/strategies/sitemap-discovery.md` - Complete sitemap guide (4 patterns)
+- `web-scraper/strategies/api-discovery.md` - Finding and using APIs
+- `web-scraper/strategies/dom-scraping.md` - DOM scraping via DevTools bridge
+- `web-scraper/strategies/cheerio-scraping.md` - HTTP-only scraping
+- `web-scraper/strategies/hybrid-approaches.md` - Combining strategies
+- `web-scraper/strategies/anti-blocking.md` - Multi-layer anti-detection (stealth, humanizer, proxies, TLS)
+- `web-scraper/strategies/session-workflows.md` - Session recording, HAR export, replay
 
 ### Examples (Runnable Code)
 **For**: Working code to reference or execute
 
 **JavaScript Learning Examples** (Simple standalone scripts):
-- `examples/sitemap-basic.js` - Simple sitemap scraper
-- `examples/api-scraper.js` - Pure API approach
-- `examples/traffic-interception-basic.js` - Proxy-based reconnaissance
-- `examples/hybrid-sitemap-api.js` - Combined approach
-- `examples/iterative-fallback.js` - Try traffic interception→sitemap→API→DOM scraping
+- `web-scraper/examples/sitemap-basic.js` - Simple sitemap scraper
+- `web-scraper/examples/api-scraper.js` - Pure API approach
+- `web-scraper/examples/traffic-interception-basic.js` - Proxy-based reconnaissance
+- `web-scraper/examples/hybrid-sitemap-api.js` - Combined approach
+- `web-scraper/examples/iterative-fallback.js` - Try traffic interception→sitemap→API→DOM scraping
 
 **TypeScript Production Examples** (Complete Actors):
-- `apify/examples/basic-scraper/` - Sitemap + Playwright
-- `apify/examples/anti-blocking/` - Fingerprinting + proxies
-- `apify/examples/hybrid-api/` - Sitemap + API (optimal)
+- `web-scraper/apify/examples/basic-scraper/` - Sitemap + Playwright
+- `web-scraper/apify/examples/anti-blocking/` - Fingerprinting + proxies
+- `web-scraper/apify/examples/hybrid-api/` - Sitemap + API (optimal)
 
 ### Reference (Quick Lookup)
 **For**: Quick patterns and troubleshooting
 
-- `reference/report-schema.md` - **Intelligence report format (Sections 1-7 + self-critique)**
-- `reference/proxy-tool-reference.md` - Proxy-MCP tool reference (all 80+ tools)
-- `reference/regex-patterns.md` - Common URL regex patterns
-- `reference/fingerprint-patterns.md` - Stealth mode + TLS fingerprint presets
-- `reference/anti-patterns.md` - What NOT to do
+- `web-scraper/reference/report-schema.md` - **Intelligence report format (Sections 1-7 + self-critique)**
+- `web-scraper/reference/proxy-tool-reference.md` - Proxy-MCP tool reference (all 80+ tools)
+- `web-scraper/reference/regex-patterns.md` - Common URL regex patterns
+- `web-scraper/reference/fingerprint-patterns.md` - Stealth mode + TLS fingerprint presets
+- `web-scraper/reference/anti-patterns.md` - What NOT to do
 
 ### Apify (Production Deployment)
 **For**: Creating production Apify Actors
 
-- `apify/README.md` - When and how to use Apify
-- `apify/typescript-first.md` - **Why TypeScript for actors**
-- `apify/cli-workflow.md` - **apify create workflow (CRITICAL)**
-- `apify/initialization.md` - Complete setup guide
-- `apify/input-schemas.md` - Input validation patterns
-- `apify/configuration.md` - actor.json setup
-- `apify/deployment.md` - Testing and deployment
-- `apify/templates/` - TypeScript boilerplate
+- `web-scraper/apify/README.md` - When and how to use Apify
+- `web-scraper/apify/typescript-first.md` - **Why TypeScript for actors**
+- `web-scraper/apify/cli-workflow.md` - **apify create workflow (CRITICAL)**
+- `web-scraper/apify/initialization.md` - Complete setup guide
+- `web-scraper/apify/input-schemas.md` - Input validation patterns
+- `web-scraper/apify/configuration.md` - actor.json setup
+- `web-scraper/apify/deployment.md` - Testing and deployment
+- `web-scraper/apify/templates/` - TypeScript boilerplate
 
 **Note**: Each file is self-contained and can be read independently. Claude will navigate to specific files as needed.
 
@@ -422,7 +421,7 @@ Start cheap (curl), escalate only when needed:
 
 ### 2. Detect First, Then Search Relevant Patterns
 Use framework detection to focus searches:
-- Match against `strategies/framework-signatures.md` before scanning
+- Match against `web-scraper/strategies/framework-signatures.md` before scanning
 - Skip patterns that don't apply (no `__NEXT_DATA__` on Amazon)
 - Known major sites get direct strategy lookup
 

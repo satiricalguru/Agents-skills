@@ -295,8 +295,8 @@ if [ "$TOOL_NAME" = "Edit" ] || [ "$TOOL_NAME" = "Write" ]; then
   rm -f "$FILTERED"
   if filter_file "$FILE_PATH" "$FILTERED" "$ID"; then
     cat "$FILTERED" > "$FILE_PATH"
-    rm -f "$FILTERED"
   fi
+  rm -f "$FILTERED"
 
   exit 0
 fi

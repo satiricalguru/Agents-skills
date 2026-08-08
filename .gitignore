@@ -4,10 +4,15 @@
 ._*
 
 # Git internals
-.git/kilo
 .git/COMMIT_EDITMSG
 .git/ORIG_HEAD
 .git/FETCH_HEAD
+
+# Hook caches / runtime state
+.claude/sdd-cache/
+.claude/.simplify-ignore-cache/
+__pycache__/
+node_modules/
 
 # Temporary files
 /tmp/

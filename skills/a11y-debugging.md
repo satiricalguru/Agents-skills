@@ -51,7 +51,7 @@ The accessibility tree exposes the heading hierarchy and semantic landmarks.
 
 1.  Locate buttons, inputs, and images in the `take_snapshot` output.
 2.  Ensure interactive elements have an accessible name (e.g., a button should not just say `""` if it only contains an icon).
-3.  **Orphaned Inputs**: Verify that all form inputs have associated labels. Use `evaluate_script` with the **"Find Orphaned Form Inputs" snippet** found in [references/a11y-snippets.md](references/a11y-snippets.md).
+3.  **Orphaned Inputs**: Verify that all form inputs have associated labels. Use `evaluate_script` with the **"Find Orphaned Form Inputs" snippet** found in references/a11y-snippets.md.
 4.  Check images for `alt` text.
 
 ### 5. Focus & Keyboard Navigation
@@ -65,7 +65,7 @@ Testing "keyboard traps" and proper focus management without visual feedback rel
 
 ### 6. Tap Targets and Visuals
 
-According to web.dev, tap targets should be at least 48x48 pixels with sufficient spacing. Since the accessibility tree doesn't show sizes, use `evaluate_script` with the **"Measure Tap Target Size" snippet** found in [references/a11y-snippets.md](references/a11y-snippets.md).
+According to web.dev, tap targets should be at least 48x48 pixels with sufficient spacing. Since the accessibility tree doesn't show sizes, use `evaluate_script` with the **"Measure Tap Target Size" snippet** found in references/a11y-snippets.md.
 
 _Pass the element's `uid` from the snapshot as an argument to `evaluate_script`._
 
@@ -76,11 +76,11 @@ To verify color contrast ratios, start by checking for native accessibility issu
 1.  Call `list_console_messages` with `types: ["issue"]`.
 2.  Look for "Low Contrast" issues in the output.
 
-If native audits do not report issues (which may happen in some headless environments) or if you need to check a specific element manually, use `evaluate_script` with the **"Check Color Contrast" snippet** found in [references/a11y-snippets.md](references/a11y-snippets.md).
+If native audits do not report issues (which may happen in some headless environments) or if you need to check a specific element manually, use `evaluate_script` with the **"Check Color Contrast" snippet** found in references/a11y-snippets.md.
 
 ### 8. Global Page Checks
 
-Verify document-level accessibility settings often missed in component testing using the **"Global Page Checks" snippet** found in [references/a11y-snippets.md](references/a11y-snippets.md).
+Verify document-level accessibility settings often missed in component testing using the **"Global Page Checks" snippet** found in references/a11y-snippets.md.
 
 ## Troubleshooting
 

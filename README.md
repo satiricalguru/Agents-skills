@@ -4,14 +4,14 @@
 
 # AI AGENTS SKILLS
 
-### *Supercharge Your Agentic AI Coding Assistants with 85+ Production-Grade Skills, Personas & Workflows*
+### *Supercharge Your Agentic AI Coding Assistants with 86+ Production-Grade Skills, Personas & Workflows*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/satiricalguru/Agents-skills/pulls)
 [![Antigravity Compatible](https://img.shields.io/badge/Antigravity-IDE-blueviolet.svg)](#-installation)
 [![Claude Code Ready](https://img.shields.io/badge/Claude--Code-Ready-orange.svg)](#-installation)
 [![Cursor / Windsurf](https://img.shields.io/badge/Cursor%20%2F%20Windsurf-Supported-00d2ff.svg)](#-installation)
-[![Skills Count](https://img.shields.io/badge/Skills-85%2B%20Available-ff69b4.svg)](#%EF%B8%8F-available-skills)
+[![Skills Count](https://img.shields.io/badge/Skills-86%2B%20Available-ff69b4.svg)](#%EF%B8%8F-available-skills)
 
 <br/>
 
@@ -27,9 +27,9 @@
 
 ### 💡 Why AI Agents Skills?
 
-| 🛠️ **85+ Specialized Skills** | 👥 **4+ Expert Personas** | 📂 **Curated 2026 Prompts** | ⚡ **1-Command Install** |
+| 🛠️ **86+ Specialized Skills** | 👥 **4+ Expert Personas** | 📂 **Curated 2026 Prompts** | ⚡ **1-Command Install** |
 | :--- | :--- | :--- | :--- |
-| Modular workflows for TDD, Security, Web Scraping, DevTools & Science | Senior Staff Reviewer, QA Specialist, & Security Auditor personas | Raw system prompts for Antigravity, Claude 4.7, GPT-5.5 & Gemini 3.5 | Single `curl` script or `npx` command to equip your local agent |
+| Modular workflows for TDD, Security, Web Scraping, DevTools & Science | Senior Staff Reviewer, QA Specialist, & Security Auditor personas | Raw system prompts for Antigravity, Claude Opus 5, GPT-5.6 Sol & Gemini 3.6 | Single `curl` script or `npx` command to equip your local agent |
 
 </div>
 
@@ -156,25 +156,26 @@ Quick-reference checklists located in [`references/`](references/):
 
 ## 📂 Curated AI Model Prompts
 
-The [`prompts/`](prompts/) directory contains a curated library of clean, date-standardized system prompts for leading AI model families. These prompts are structured without underscores (space-separated filenames) and updated to represent a current date context of **June 14, 2026**:
+The [`prompts/`](prompts/) directory contains a curated library of clean, date-standardized system prompts for leading AI model families. These prompts are structured without underscores (space-separated filenames) and updated to represent a current date context of **August 2026**:
 
 | Model Family | Prompts |
 | :--- | :--- |
 | **Antigravity** | [`antigravity prompt.md`](prompts/antigravity/antigravity%20prompt.md) |
-| **Claude** | [`claude 4.6 sonnet prompt.txt`](prompts/claude/claude%204.6%20sonnet%20prompt.txt), [`claude 4.7 opus prompt.txt`](prompts/claude/claude%204.7%20opus%20prompt.txt), [`claude code prompt.md`](prompts/claude/claude%20code%20prompt.md) |
-| **ChatGPT** | [`chatgpt gpt 4.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%204.5%20prompt.md), [`chatgpt gpt 4o prompt.txt`](prompts/chatgpt/chatgpt%20gpt%204o%20prompt.txt), [`chatgpt gpt 5.4 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.4%20prompt.md), [`chatgpt gpt 5.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.5%20prompt.md), [`chatgpt o3 o4 mini prompt.txt`](prompts/chatgpt/chatgpt%20o3%20o4%20mini%20prompt.txt) |
-| **Gemini** | [`gemini 2.5 pro prompt.md`](prompts/gemini/gemini%202.5%20pro%20prompt.md), [`gemini 3.1 pro prompt.md`](prompts/gemini/gemini%203.1%20pro%20prompt.md), [`gemini 3.5 flash prompt.md`](prompts/gemini/gemini%203.5%20flash%20prompt.md) |
-| **Groq / Grok** | [`grok 3 prompt.md`](prompts/groq/grok%203%20prompt.md), [`grok 4.1 prompt.txt`](prompts/groq/grok%204.1%20prompt.txt), [`grok 5.0 prompt.txt`](prompts/groq/grok%205.0%20prompt.txt) |
-| **Llama** | [`llama 4 whatsapp prompt.txt`](prompts/llama/llama%204%20whatsapp%20prompt.txt), [`llama 5 prompt.txt`](prompts/llama/llama%205%20prompt.txt), [`llama muse spark prompt.txt`](prompts/llama/llama%20muse%20spark%20prompt.txt) |
-| **DeepSeek** | [`deepseek r1 prompt.md`](prompts/deepseek/deepseek%20r1%20prompt.md), [`deepseek v3 prompt.md`](prompts/deepseek/deepseek%20v3%20prompt.md) |
-| **GLM** | [`glm 5.1 prompt.md`](prompts/glm/glm%205.1%20prompt.md), [`glm 5 turbo prompt.md`](prompts/glm/glm%205%20turbo%20prompt.md) |
-| **Kimi** | [`kimi k2.6 prompt.md`](prompts/kimi/kimi%20k2.6%20prompt.md) |
-| **Qwen** | [`qwen 3.6 plus prompt.md`](prompts/qwen/qwen%203.6%20plus%20prompt.md), [`qwen 3.7 plus prompt.md`](prompts/qwen/qwen%203.7%20plus%20prompt.md), [`qwen 3.7 max prompt.md`](prompts/qwen/qwen%203.7%20max%20prompt.md) |
+| **Claude** | [`claude opus 5 prompt.txt`](prompts/claude/claude%20opus%205%20prompt.txt), [`claude 4.7 opus prompt.txt`](prompts/claude/claude%204.7%20opus%20prompt.txt), [`claude 4.6 sonnet prompt.txt`](prompts/claude/claude%204.6%20sonnet%20prompt.txt), [`claude code prompt.md`](prompts/claude/claude%20code%20prompt.md) |
+| **ChatGPT** | [`chatgpt gpt 5.6 sol prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.6%20sol%20prompt.md), [`chatgpt gpt 5.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.5%20prompt.md), [`chatgpt gpt 5.4 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.4%20prompt.md), [`chatgpt gpt 4.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%204.5%20prompt.md), [`chatgpt gpt 4o prompt.txt`](prompts/chatgpt/chatgpt%20gpt%204o%20prompt.txt), [`chatgpt o3 o4 mini prompt.txt`](prompts/chatgpt/chatgpt%20o3%20o4%20mini%20prompt.txt) |
+| **Gemini** | [`gemini 3.6 flash prompt.md`](prompts/gemini/gemini%203.6%20flash%20prompt.md), [`gemini 3.5 flash prompt.md`](prompts/gemini/gemini%203.5%20flash%20prompt.md), [`gemini 3.1 pro prompt.md`](prompts/gemini/gemini%203.1%20pro%20prompt.md), [`gemini 2.5 pro prompt.md`](prompts/gemini/gemini%202.5%20pro%20prompt.md) |
+| **Grok** | [`grok 4.5 prompt.txt`](prompts/grok/grok%204.5%20prompt.txt), [`grok 5.0 prompt.txt`](prompts/grok/grok%205.0%20prompt.txt), [`grok 4.1 prompt.txt`](prompts/grok/grok%204.1%20prompt.txt), [`grok 3 prompt.md`](prompts/grok/grok%203%20prompt.md) |
+| **Llama** | [`llama muse spark 1.2 prompt.txt`](prompts/llama/llama%20muse%20spark%201.2%20prompt.txt), [`llama 5 prompt.txt`](prompts/llama/llama%205%20prompt.txt), [`llama 4 whatsapp prompt.txt`](prompts/llama/llama%204%20whatsapp%20prompt.txt) |
+| **DeepSeek** | [`deepseek v4 flash prompt.md`](prompts/deepseek/deepseek%20v4%20flash%20prompt.md), [`deepseek r1 prompt.md`](prompts/deepseek/deepseek%20r1%20prompt.md), [`deepseek v3 prompt.md`](prompts/deepseek/deepseek%20v3%20prompt.md) |
+| **GLM** | [`glm 5.2 prompt.md`](prompts/glm/glm%205.2%20prompt.md), [`glm 5.1 prompt.md`](prompts/glm/glm%205.1%20prompt.md), [`glm 5 turbo prompt.md`](prompts/glm/glm%205%20turbo%20prompt.md) |
+| **Kimi** | [`kimi k3 prompt.md`](prompts/kimi/kimi%20k3%20prompt.md), [`kimi k2.6 prompt.md`](prompts/kimi/kimi%20k2.6%20prompt.md) |
+| **Qwen** | [`qwen 3.8 max prompt.md`](prompts/qwen/qwen%203.8%20max%20prompt.md), [`qwen 3.7 max prompt.md`](prompts/qwen/qwen%203.7%20max%20prompt.md), [`qwen 3.7 plus prompt.md`](prompts/qwen/qwen%203.7%20plus%20prompt.md), [`qwen 3.6 plus prompt.md`](prompts/qwen/qwen%203.6%20plus%20prompt.md) |
+| **Devin** | [`devin 3.0 prompt.md`](prompts/devin/devin%203.0%20prompt.md), [`devin 2.0 prompt.md`](prompts/devin/devin%202.0%20prompt.md) |
 | **Minimax** | [`minimax prompt.txt`](prompts/minimax/minimax%20prompt.txt) |
 | **Mistral** | [`mistral le chat prompt.md`](prompts/mistral/mistral%20le%20chat%20prompt.md) |
 | **Perplexity** | [`perplexity deep research prompt.txt`](prompts/perplexity/perplexity%20deep%20research%20prompt.txt) |
 | **Replit** | [`replit agent prompt.md`](prompts/replit/replit%20agent%20prompt.md) |
-| **Vercel** | [`vercel v0 prompt.txt`](prompts/vercel%20vo/vercel%20v0%20prompt.txt) |
+| **Vercel** | [`vercel v0 prompt.txt`](prompts/vercel%20v0/vercel%20v0%20prompt.txt) |
 | **Windsurf** | [`windsurf prompt.md`](prompts/windsurf/windsurf%20prompt.md), [`windsurf tools.md`](prompts/windsurf/windsurf%20tools.md) |
 
 ---
@@ -223,7 +224,7 @@ git clone https://github.com/satiricalguru/Agents-skills.git
 # Restart your IDE / Agent to load the plugin
 ```
 
-### Method 3: Individual Skill Installation
+### Method 4: Individual Skill Installation
 
 Install only a specific skill into an existing plugin:
 
@@ -366,15 +367,16 @@ description: Brief description of the skill.
 ├── skills/
 │   ├── idea-refine/                 # idea-refine support assets (examples, frameworks, etc.)
 │   ├── reverse-engineering-skill/   # reverse-engineering support assets (SETUP.md, scripts, etc.)
-│   └── ... (85 restructured .md skill files directly in skills/)
+│   └── ... (86 restructured .md skill files directly in skills/)
 ├── references/                  # Supplementary checklists
 ├── agents/                      # Specialist personas
 ├── commands/                    # Antigravity CLI commands
-├── .claude/                     # Claude Code commands
-├── .gemini/                     # Gemini CLI commands
-├── .opencode/                   # OpenCode commands/config
+├── claude/                      # Claude Code commands
+├── gemini/                      # Gemini CLI commands
+├── opencode/                    # OpenCode commands/config
 ├── hooks/                       # Session lifecycle hooks
 ├── scripts/                     # Utility scripts
+├── docs/                        # Interactive skills dashboard (npm start)
 └── plugin.json                  # Antigravity plugin manifest
 ```
 

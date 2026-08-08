@@ -127,7 +127,7 @@ subcommands, use the `custom-query` subcommand.
 
 **Before writing a custom query:** Read the reference documentation to
 understand the API schema, types, and see example queries. See
-[references/OpenTargets_GraphQL_Guide.md](references/OpenTargets_GraphQL_Guide)
+references/OpenTargets_GraphQL_Guide.md
 for full schema details, endpoints, and examples.
 
 **Example: Finding drugs for a disease**

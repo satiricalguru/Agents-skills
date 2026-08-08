@@ -44,28 +44,28 @@ Follow this strict workflow to build your application. You **must** read the lin
 
 ### 1. Define Data Model (`schema/schema.gql`)
 Define your GraphQL types, tables, and relationships (which map to a Postgres schema).
-> **Read [reference/schema.md](reference/schema.md)** for:
+> **Read reference/schema.md** for:
 > *   `@table`, `@col`, `@default`
 > *   Relationships (`@ref`, one-to-many, many-to-many)
 > *   Data types (UUID, Vector, JSON, etc.)
 
 ### 2. Define Authorized Operations (`connector/queries.gql`, `connector/mutations.gql`)
 Write the queries and mutations your client will use, including authorization logic. SQL Connect is secure by default.
-> **Read [reference/operations.md](reference/operations.md)** for:
+> **Read reference/operations.md** for:
 > *   **Queries**: Filtering (`where`), Ordering (`orderBy`), Pagination (`limit`/`offset`).
 > *   **Mutations**: Create (`_insert`), Update (`_update`), Delete (`_delete`).
 > *   **Upserts**: Use `_upsert` to "insert or update" records (CRITICAL for user profiles).
 > *   **Transactions**: Use `@transaction` for multi-step atomic operations. Use `_expr: "response.<prevStep>"` to pass data between steps.
 >
-> **Read [reference/security.md](reference/security.md)** for authorization:
+> **Read reference/security.md** for authorization:
 > *   `@auth(level: ...)` for PUBLIC, USER, or NO_ACCESS.
 > *   `@check` and `@redact` for row-level security and validation.
 >
-> **Read [reference/realtime.md](reference/realtime.md)** for real-time subscriptions:
+> **Read reference/realtime.md** for real-time subscriptions:
 > *   `@refresh` directive for time-based polling and event-driven updates.
 > *   CEL conditions to scope refresh triggers precisely.
 >
-> **Read [reference/native_sql.md](reference/native_sql.md)** for Native SQL operations:
+> **Read reference/native_sql.md** for Native SQL operations:
 > *   Embedding raw SQL with `_select`, `_selectFirst`, `_execute`
 > *   Strict rules for positional parameters (`$1`, `$2`), quoting, and CTEs
 > *   Advanced PostgreSQL features (PostGIS, Window Functions)
@@ -94,11 +94,11 @@ npx -y firebase-tools@latest dataconnect:sdk:generate
 ```
 
 For platform-specific instructions on how to use the generated SDKs, read:
-*   **Web (TypeScript)**: [reference/sdk_web.md](reference/sdk_web.md)
-*   **Android (Kotlin)**: [reference/sdk_android.md](reference/sdk_android.md)
-*   **iOS (Swift)**: [reference/sdk_ios.md](reference/sdk_ios.md)
-*   **Admin (Node.js)**: [reference/sdk_admin_node.md](reference/sdk_admin_node.md)
-*   **Flutter (Dart)**: [reference/sdk_flutter.md](reference/sdk_flutter.md)
+*   **Web (TypeScript)**: reference/sdk_web.md
+*   **Android (Kotlin)**: reference/sdk_android.md
+*   **iOS (Swift)**: reference/sdk_ios.md
+*   **Admin (Node.js)**: reference/sdk_admin_node.md
+*   **Flutter (Dart)**: reference/sdk_flutter.md
 
 
 
@@ -110,21 +110,21 @@ If you need to implement a specific feature, consult the mapped reference file:
 
 | Feature | Reference File | Key Concepts |
 | :--- | :--- | :--- |
-| **Data Modeling** | [reference/schema.md](reference/schema.md) | `@table`, `@unique`, `@index`, Relations |
-| **Vector Search** | [reference/advanced.md](reference/advanced.md) | `Vector`, `@col(dataType: "vector")` |
-| **Full-Text Search** | [reference/advanced.md](reference/advanced.md) | `@searchable` |
-| **Upserting Data** | [reference/operations.md](reference/operations.md) | `_upsert` mutations |
-| **Complex Filters** | [reference/operations.md](reference/operations.md) | `_or`, `_and`, `_not`, `eq`, `contains` |
-| **Transactions** | [reference/operations.md](reference/operations.md) | `@transaction`, `response` binding |
-| **Environment Config** | [reference/config.md](reference/config.md) | `dataconnect.yaml`, `connector.yaml` |
-| **Realtime Subscriptions** | [reference/realtime.md](reference/realtime.md) | `@refresh`, `subscribe()`, auto-refresh |
-| **Starter Templates** | [templates.md](templates.md) | CRUD, user-owned resources, many-to-many, SDK init |
+| **Data Modeling** | reference/schema.md | `@table`, `@unique`, `@index`, Relations |
+| **Vector Search** | reference/advanced.md | `Vector`, `@col(dataType: "vector")` |
+| **Full-Text Search** | reference/advanced.md | `@searchable` |
+| **Upserting Data** | reference/operations.md | `_upsert` mutations |
+| **Complex Filters** | reference/operations.md | `_or`, `_and`, `_not`, `eq`, `contains` |
+| **Transactions** | reference/operations.md | `@transaction`, `response` binding |
+| **Environment Config** | reference/config.md | `dataconnect.yaml`, `connector.yaml` |
+| **Realtime Subscriptions** | reference/realtime.md | `@refresh`, `subscribe()`, auto-refresh |
+| **Starter Templates** | templates.md | CRUD, user-owned resources, many-to-many, SDK init |
 
 ---
 
 ## Deployment & CLI
 
-> **Read [reference/config.md](reference/config.md)** for deep dive on configuration.
+> **Read reference/config.md** for deep dive on configuration.
 
 Follow these patterns based on your current task:
 
@@ -149,6 +149,6 @@ Follow these patterns based on your current task:
 ## Examples
 
 For complete, working code examples of schemas and operations, see
-**[examples.md](examples.md)**.
+**examples.md**.
 
-For ready-to-use starter templates (CRUD, user-owned resources, many-to-many, YAML configs, SDK init), see **[templates.md](templates.md)**.
+For ready-to-use starter templates (CRUD, user-owned resources, many-to-many, YAML configs, SDK init), see **templates.md**.

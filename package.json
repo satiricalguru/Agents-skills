@@ -7,7 +7,10 @@
     "agents-skills": "./install.sh"
   },
   "scripts": {
-    "install-skills": "./install.sh"
+    "install-skills": "./install.sh",
+    "validate": "node scripts/validate-skills.js",
+    "generate-db": "node docs/generate-skills-db.js",
+    "start": "node docs/server.js"
   },
   "repository": {
     "type": "git",

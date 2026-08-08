@@ -21,24 +21,24 @@ Complete these setup steps before proceeding:
         tools.
     -   **CRITICAL**: Before configuring any extensions or agent environments
         below, you MUST read
-        [references/local-env-setup.md](references/local-env-setup.md).
+        references/local-env-setup.md.
     -   **DO NOT SKIP** this step: if 'firebase-basics' is the only
         Firebase skill available to you, you must follow the reference for your
         agent environment to set up the full suite of Firebase skills:
         -   **Gemini CLI**: Review
-            [references/setup/gemini_cli.md](references/setup/gemini_cli.md)
+            references/setup/gemini_cli.md
         -   **Antigravity**: Review
-            [references/setup/antigravity.md](references/setup/antigravity.md)
+            references/setup/antigravity.md
         -   **Android Studio**: Review
-            [references/setup/android_studio.md](references/setup/android_studio.md)
+            references/setup/android_studio.md
         -   **Claude Code**: Review
-            [references/setup/claude_code.md](references/setup/claude_code.md)
+            references/setup/claude_code.md
         -   **Cursor**: Review
-            [references/setup/cursor.md](references/setup/cursor.md)
+            references/setup/cursor.md
         -   **GitHub Copilot**: Review
-            [references/setup/github_copilot.md](references/setup/github_copilot.md)
+            references/setup/github_copilot.md
         -   **Other Agents**: Review
-            [references/setup/other_agents.md](references/setup/other_agents.md)
+            references/setup/other_agents.md
 
 2.  **Authentication:** Ensure you are logged in to Firebase so that commands
     have the correct permissions. Run `npx -y firebase-tools@latest login`. For
@@ -81,12 +81,12 @@ Adhere to these principles:
 3. **Follow Agent Skills for implementation guidance:** Skills provide opinionated workflows (CUJs), security rules, and best practices. Always consult them to understand *how* to implement Firebase features correctly instead of relying on general knowledge.
 4. **Use Firebase MCP Server tools instead of direct API calls:** Whenever you need to interact with remote Firebase APIs (such as fetching Crashlytics logs or executing Data Connect queries), use the tools provided by the Firebase MCP Server instead of attempting manual API calls.
 5. **Keep Plugin / Agent Skills updated:** Since Firebase best practices evolve quickly, regularly check for and install updates to their Firebase plugin or Agent Skills. Similarly, if you encounter issues with outdated tools or commands, follow the steps below based on your agent environment:
-   - **Antigravity**: Follow [references/refresh/antigravity.md](references/refresh/antigravity.md)
-   - **Gemini CLI**: Follow [references/refresh/gemini-cli.md](references/refresh/gemini-cli.md)
-   - **Claude Code**: Follow [references/refresh/claude.md](references/refresh/claude.md)
-   - **Cursor**: Follow [references/refresh/other-agents.md](references/refresh/other-agents.md)
-   - **Android Studio**: Follow [references/refresh/android_studio.md](references/refresh/android_studio.md)
-   - **Others**: Follow [references/refresh/other-agents.md](references/refresh/other-agents.md)
+   - **Antigravity**: Follow references/refresh/antigravity.md
+   - **Gemini CLI**: Follow references/refresh/gemini-cli.md
+   - **Claude Code**: Follow references/refresh/claude.md
+   - **Cursor**: Follow references/refresh/other-agents.md
+   - **Android Studio**: Follow references/refresh/android_studio.md
+   - **Others**: Follow references/refresh/other-agents.md
 6. **Automate Config File Retrieval:** When setting up iOS or Android apps, do NOT direct users to the Firebase Console to download `google-services.json` or `GoogleService-Info.plist`. Instead, use the Firebase CLI to fetch the config programmatically:
    - For Android: `npx -y firebase-tools@latest apps:sdkconfig ANDROID <APP_ID> --project <PROJECT_ID>`
    - For iOS: `npx -y firebase-tools@latest apps:sdkconfig IOS <APP_ID> --project <PROJECT_ID>`
@@ -94,12 +94,12 @@ Adhere to these principles:
 
 # References
 
-- **Initialize Firebase:** See [references/firebase-service-init.md](references/firebase-service-init.md) when you need to initialize new Firebase services using the CLI.
-- **Exploring Commands:** See [references/firebase-cli-guide.md](references/firebase-cli-guide.md) to discover and understand CLI functionality.
+- **Initialize Firebase:** See references/firebase-service-init.md when you need to initialize new Firebase services using the CLI.
+- **Exploring Commands:** See references/firebase-cli-guide.md to discover and understand CLI functionality.
 - **SDK Setup:** For detailed guides on adding Firebase to your app:
-  - **Web**: See [references/web_setup.md](references/web_setup.md)
-  - **Android**: See [references/android_setup.md](references/android_setup.md)
-  - **iOS**: See [references/ios_setup.md](references/ios_setup.md)
+  - **Web**: See references/web_setup.md
+  - **Android**: See references/android_setup.md
+  - **iOS**: See references/ios_setup.md
 
 # Common Issues
 

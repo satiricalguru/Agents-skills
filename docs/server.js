@@ -20,8 +20,17 @@ const server = http.createServer((req, res) => {
   // Normalize path and set index.html as default
   let filePath = req.url === '/' ? '/index.html' : req.url;
   
-  // Safe resolution to prevent directory traversal
-  filePath = path.join(__dirname, filePath);
+  // Strip query string / hash and reject any traversal attempt
+  filePath = decodeURIComponent(filePath.split('?')[0].split('#')[0]);
+  filePath = path.normalize(path.join(__dirname, filePath));
+
+  // Directory traversal guard: resolved file must stay inside docs root
+  if (filePath !== __dirname && !filePath.startsWith(__dirname + path.sep)) {
+    console.log(`[403] Forbidden: ${req.url}`);
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('403 Forbidden');
+    return;
+  }
 
   // Check if file exists
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {

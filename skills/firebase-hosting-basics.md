@@ -33,10 +33,10 @@ Firebase Hosting provides production-grade web content hosting for developers. W
 ## Instructions
 
 ### 1. Configuration (`firebase.json`)
-For details on configuring Hosting behavior, including public directories, redirects, rewrites, and headers, see [configuration.md](references/configuration.md).
+For details on configuring Hosting behavior, including public directories, redirects, rewrites, and headers, see configuration.md.
 
 ### 2. Deploying
-For instructions on deploying your site, using preview channels, and managing releases, see [deploying.md](references/deploying.md).
+For instructions on deploying your site, using preview channels, and managing releases, see deploying.md.
 
 ### 3. Emulation
 To test your app locally:

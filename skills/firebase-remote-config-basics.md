@@ -30,8 +30,8 @@ If a command fails because "no active project is selected":
 
 To learn how to set up Remote Config in your application code, choose your platform:
 
-*   **Android**: [android_setup.md](references/android_setup.md)
-*   **iOS**: [ios_setup.md](references/ios_setup.md)
+*   **Android**: android_setup.md
+*   **iOS**: ios_setup.md
 
 ## Best Practices and Template Management
 

@@ -263,7 +263,7 @@ uv run scripts/get_stats.py --output /tmp/ols_stats.json 2>/dev/null
 ## Reference
 
 -   **API Reference**: See
-    [references/api_reference.md](references/api_reference.md) for common ontology
+    references/api_reference.md for common ontology
     IDs, OBO ID format, and key API endpoints.
 
 ## Workflow

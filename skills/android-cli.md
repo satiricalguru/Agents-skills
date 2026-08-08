@@ -27,10 +27,10 @@ Create projects from templates using the `create` command.
 For example: `android create empty-activity --name="My App" --output=./my-app`
 
 ## Interacting with devices
-For more information on interacting with running devices, see [here](references/interact.md)
+For more information on interacting with running devices, see here
 
 ## Running journey tests
-For more information on running journeys, see [here](references/journeys.md)
+For more information on running journeys, see here
 
 ## Doc searching
 The `docs` command searches authoritative, high-quality Android developer documentation in the Android Knowledge Base.

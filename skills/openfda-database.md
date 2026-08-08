@@ -96,7 +96,7 @@ Stdout prints a compact summary:
 -   `--category`: API category — `drug`, `device`, `food`, `tobacco`, `other`,
     `animalandveterinary`, `cosmetic`, `transparency`.
 -   `--endpoint`: Endpoint within the category (e.g., `event`, `label`, `510k`).
-    See [references/api_endpoints.md](references/api_endpoints.md) for full
+    See references/api_endpoints.md for full
     list.
 -   `--search`: Query string (e.g.,
     `patient.drug.medicinalproduct:aspirin+AND+serious:1`).
@@ -213,7 +213,7 @@ Category to endpoint mapping:
 ## Reference
 
 -   **Query syntax and all endpoints**: See
-    [references/api_endpoints.md](references/api_endpoints.md) for field names,
+    references/api_endpoints.md for field names,
     search syntax, date ranges, and boolean operators.
 
 ## Recipes
@@ -222,7 +222,7 @@ Common query patterns for drugs, devices, foods, tobacco, cosmetics, animal and
 veterinary products, substances, transparency data, adverse events, recalls,
 labeling, approvals, shortages, 510(k) clearances, NDC lookups, any FDA safety
 or regulatory data query, and more. See
-[references/recipes.md](references/recipes.md) for the full recipes.
+references/recipes.md for the full recipes.
 
 ## Workflow
 

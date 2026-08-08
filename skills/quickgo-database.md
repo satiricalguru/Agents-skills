@@ -57,16 +57,16 @@ The tool has four main subcommands:
 
 1.  **`go`**: For retrieving information about GO terms (e.g. definitions,
     ancestors, descendants, and slims). See
-    [references/go_terms.md](references/go_terms.md).
+    references/go_terms.md.
 2.  **`annotation`**: For finding functional annotations linking gene products
     to GO terms. This is your primary functional mapper. See
-    [references/annotations.md](references/annotations.md).
+    references/annotations.md.
 3.  **`geneproduct`**: For resolving gene symbols (like `PROC`) to their formal
     database identifiers. See
-    [references/gene_products.md](references/gene_products.md).
+    references/gene_products.md.
 4.  **`eco`**: For Evidence & Conclusion Ontology terms (used in annotations to
     indicate how an annotation was derived, e.g. experimental vs electronic).
-    See [references/eco_terms.md](references/eco_terms.md).
+    See references/eco_terms.md.
 
 ## Common Workflows
 

@@ -28,14 +28,14 @@ When investigating a frontend web application memory leak, utilize the `chrome-d
 
 Once you have generated `.heapsnapshot` files using `take_memory_snapshot`, use `memlab` to automatically find memory leaks.
 
-- Read [references/memlab.md](references/memlab.md) for how to use `memlab` to analyze the generated heapsnapshots.
+- Read references/memlab.md for how to use `memlab` to analyze the generated heapsnapshots.
 - Do **not** read raw `.heapsnapshot` files using `read_file` or `cat`.
 
 ### 3. Identifying Common Leaks
 
 When you have found a leak trace (e.g., via `memlab` output), you must identify the root cause in the code.
 
-- Read [references/common-leaks.md](references/common-leaks.md) for examples of common memory leaks and how to fix them.
+- Read references/common-leaks.md for examples of common memory leaks and how to fix them.
 
 ### 4. Fallback: Comparing Snapshots Manually
 

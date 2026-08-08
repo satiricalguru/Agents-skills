@@ -89,6 +89,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Helper: escape HTML for safe interpolation into innerHTML
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[c]);
+  }
+
+  // Helper: strip dangerous HTML (scripts, event handlers, javascript:/data: URLs)
+  function sanitizeHtml(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    const walker = (node) => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        for (const attr of Array.from(node.attributes)) {
+          const name = attr.name.toLowerCase();
+          const value = attr.value.trim().toLowerCase();
+          if (name.startsWith('on') || value.startsWith('javascript:')) {
+            node.removeAttribute(attr.name);
+          } else if (name === 'src' && value.startsWith('data:')) {
+            node.removeAttribute(attr.name);
+          }
+        }
+        for (const child of Array.from(node.childNodes)) walker(child);
+      }
+    };
+    walker(template.content);
+    template.content.querySelectorAll('script,style,iframe,object,embed,link,meta').forEach((el) => el.remove());
+    return template.innerHTML;
+  }
+
   // Helper to create card element
   function createSkillCard(skill) {
     const card = document.createElement('div');
@@ -99,12 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     card.innerHTML = `
       <div class="card-top">
-        <div class="skill-name">${skill.name}</div>
+        <div class="skill-name">${escapeHtml(skill.name)}</div>
         <div class="skill-checkbox">
           <i class="fa-solid fa-check"></i>
         </div>
       </div>
-      <div class="skill-why">${skill.why || skill.description || 'Custom developer workflow directive.'}</div>
+      <div class="skill-why">${escapeHtml(skill.why || skill.description || 'Custom developer workflow directive.')}</div>
     `;
 
     // Click on checkbox/top section toggles selection
@@ -166,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render markdown content
     if (window.marked) {
-      drawerMarkdown.innerHTML = marked.parse(skill.content || '# ' + skill.name + '\nNo guidelines content.');
+      drawerMarkdown.innerHTML = sanitizeHtml(marked.parse(skill.content || '# ' + skill.name + '\nNo guidelines content.'));
     } else {
       drawerMarkdown.textContent = skill.content;
     }
@@ -382,7 +416,7 @@ if (!(Test-Path $SkillsTarget)) {
 
 # 2. Sync files from current dashboard workspace
 # Resolves source skills directory dynamically
-$SourceSkills = "C:\\Projects\\Agentic Skills\\Agents-skills\\skills"
+$SourceSkills = Join-Path $pwd.Path "skills"
 if (!(Test-Path $SourceSkills)) {
     $SourceSkills = Join-Path $pwd.Path "Agents-skills\\skills"
 }

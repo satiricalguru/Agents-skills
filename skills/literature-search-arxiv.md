@@ -54,7 +54,7 @@ returned.
 *Options:*
 
 -   `--query`: Search string. See
-    [references/query_syntax.md](references/query_syntax.md) for advanced
+    references/query_syntax.md for advanced
     syntax.
 -   `--id_list`: Comma-separated list of arXiv IDs to fetch directly (e.g.,
     `1706.03762v5`).
@@ -108,7 +108,7 @@ uv run scripts/download_paper_source.py --id 2010.11645 --output source.tar.gz
 ## Reference
 
 -   **Advanced Query Syntax**: See
-    [references/query_syntax.md](references/query_syntax.md) for prefixes (au,
+    references/query_syntax.md for prefixes (au,
     ti, abs), booleans, and date filtering.
 
 ## Workflow
