@@ -4,14 +4,14 @@
 
 # AI AGENTS SKILLS
 
-### *Supercharge Your Agentic AI Coding Assistants with 86+ Production-Grade Skills, Personas & Workflows*
+### *Supercharge Your Agentic AI Coding Assistants with 184+ Production-Grade Skills, Personas & Workflows*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/satiricalguru/Agents-skills/pulls)
 [![Antigravity Compatible](https://img.shields.io/badge/Antigravity-IDE-blueviolet.svg)](#-installation)
 [![Claude Code Ready](https://img.shields.io/badge/Claude--Code-Ready-orange.svg)](#-installation)
 [![Cursor / Windsurf](https://img.shields.io/badge/Cursor%20%2F%20Windsurf-Supported-00d2ff.svg)](#-installation)
-[![Skills Count](https://img.shields.io/badge/Skills-86%2B%20Available-ff69b4.svg)](#%EF%B8%8F-available-skills)
+[![Skills Count](https://img.shields.io/badge/Skills-184%2B%20Available-ff69b4.svg)](#%EF%B8%8F-available-skills)
 
 <br/>
 
@@ -27,7 +27,7 @@
 
 ### 💡 Why AI Agents Skills?
 
-| 🛠️ **86+ Specialized Skills** | 👥 **4+ Expert Personas** | 📂 **Curated 2026 Prompts** | ⚡ **1-Command Install** |
+| 🛠️ **184+ Specialized Skills** | 👥 **4+ Expert Personas** | 📂 **Curated 2026 Prompts** | ⚡ **1-Command Install** |
 | :--- | :--- | :--- | :--- |
 | Modular workflows for TDD, Security, Web Scraping, DevTools & Science | Senior Staff Reviewer, QA Specialist, & Security Auditor personas | Raw system prompts for Antigravity, Claude Opus 5, GPT-5.6 Sol & Gemini 3.6 | Single `curl` script or `npx` command to equip your local agent |
 
@@ -46,6 +46,12 @@
   - [Review - Quality gates before merge](#review---quality-gates-before-merge)
   - [Ship - Deploy with confidence](#ship---deploy-with-confidence)
   - [Specialized Tools & Systems](#specialized-tools--systems)
+  - [Modern Web Design & Layout Systems](#modern-web-design--layout-systems)
+  - [Creative Motion, Shaders & WebGL 3D](#creative-motion-shaders--webgl-3d)
+  - [Game Development & Three.js Systems](#game-development--threejs-systems)
+  - [Audit, Quality & Anti-Slop Safeguards](#audit-quality--anti-slop-safeguards)
+  - [Creative Sourcing, Media & Generation](#creative-sourcing-media--generation)
+  - [Antigravity IDE & System Orchestration](#antigravity-ide--system-orchestration)
 - [Specialist Personas](#-specialist-personas)
 - [Reference Checklists](#-reference-checklists)
 - [Curated AI Model Prompts](#-curated-ai-model-prompts)
@@ -127,6 +133,135 @@
 | **[`supabase`](skills/supabase.md)** | Integrate, query, manage migrations, TypeScript type generation, and configure RLS on Supabase. | Postgres migrations, RLS security, Next.js SSR cookie auth, Edge Functions, pgvector |
 | **[`web-scraper`](skills/web-scraper.md)** | Adaptive web scraping with traffic interception, framework detection, anti-blocking, and Apify Actor creation. | Traffic interception, cURL recon, Playwright/Puppeteer signatures, Apify SDK |
 
+### Modern Web Design & Layout Systems
+
+| Skill | Description |
+| :--- | :--- |
+| **[`agency-grid-layout-minimal`](skills/agency-grid-layout-minimal.md)** | Create a minimal agency design system with a disciplined editorial grid, oversized typography, quiet uppercase utility labels, restrained image blocks, and subtle structural det... |
+| **[`beautiful-shadows`](skills/beautiful-shadows.md)** | Apply exact Tailwind arbitrary shadow utilities for polished, layered neutral elevation. Use when compact cards, controls, panels, popovers, hero media, feature callouts, or mod... |
+| **[`blue-cloudy-clean-modern`](skills/blue-cloudy-clean-modern.md)** | Create a clean modern design system with a luminous blue sky atmosphere, soft drifting cloud light, minimal white framing, and serene premium typography. |
+| **[`blue-laser-clean-glass-layout`](skills/blue-laser-clean-glass-layout.md)** | Create a clean dark glass layout system with a thin blue laser atmosphere, frosted premium shells, and polished dashboard structure. |
+| **[`book-serif-index`](skills/book-serif-index.md)** | Create an archival book-reader design system with serif-led pages, mono index navigation, aged paper surfaces, margin notes, and a premium catalog frame. |
+| **[`bright-green-tech-system-webgl`](skills/bright-green-tech-system-webgl.md)** | Create a bright-green technical design system with structured split layouts, hard-framed dark surfaces, mono utility labels, and a prominent WebGL visualization zone. |
+| **[`clean-minimal-beige-light-mode`](skills/clean-minimal-beige-light-mode.md)** | Create a clean minimal beige light-mode design system with warm neutral shells, quiet process grids, restrained accent color, and elegant low-contrast structure. |
+| **[`container-lines`](skills/container-lines.md)** | Add vertical container-size guide lines with mini corner squares for precise, structured web layouts. Use when asked for container lines, measured layout guides, vertical bounda... |
+| **[`corner-diagonals`](skills/corner-diagonals.md)** | Apply diagonal-cut corners and chamfered edges to buttons, cards, panels, and container shells. Use when a design needs precise geometric framing, sci-fi UI surfaces, clipped-co... |
+| **[`corner-lasers`](skills/corner-lasers.md)** | Create a corner-anchored laser composition with thin beams, a bright emitter node, bloom, and atmospheric glow or fog. |
+| **[`css-alpha-masking`](skills/css-alpha-masking.md)** | Apply CSS alpha masking with linear-gradient for horizontal or vertical edge fades (mask-image and -webkit-mask-image). Use when asked for alpha masks, fade edges, or CSS mask g... |
+| **[`css-border-gradient`](skills/css-border-gradient.md)** | Apply subtle gradient-border treatments for premium web surfaces. Use when cards, pricing panels, nav bars, modals, buttons, or hero surfaces need a refined edge highlight witho... |
+| **[`dark-blue-contrasting-clean`](skills/dark-blue-contrasting-clean.md)** | Create a dark-blue clean design system with strong contrast, cobalt gradient feature blocks, crisp framed structure, and restrained premium glow. |
+| **[`dark-glass-clean-layout`](skills/dark-glass-clean-layout.md)** | Create a dark glass layout system with frosted premium shells, clean multi-column workspace structure, floating data cards, and restrained atmospheric depth. |
+| **[`dither-background`](skills/dither-background.md)** | Create a dark monochrome procedural background with enlarged square pixels and visible Bayer-style ordered dithering. Use when a page needs an atmospheric near-black dither fiel... |
+| **[`dither-laser-dark-mode`](skills/dither-laser-dark-mode.md)** | Create a dark premium design system that combines near-black surfaces, subtle ordered-dither texture, and a thin accent-colored laser atmosphere. |
+| **[`documentary-brutalist-agency`](skills/documentary-brutalist-agency.md)** | Create or redesign creative agency, production studio, architecture, culture, and portfolio websites with billboard typography, hard black-and-white chapters, exposed grids, doc... |
+| **[`editorial-portfolio-chapters`](skills/editorial-portfolio-chapters.md)** | Create or redesign creative-studio, agency, photographer, artist, and portfolio websites where project work leads the story. Use for dark editorial shells, full-bleed campaign m... |
+| **[`editorial-service-booking`](skills/editorial-service-booking.md)** | Create or redesign appointment-based service websites for salons, barbers, spas, wellness studios, clinics, and hospitality brands. Use for warm editorial layouts, serif-led ide... |
+| **[`editorial-tech`](skills/editorial-tech.md)** | Blend editorial magazine composition with precision product-tech detailing using asymmetrical grids, cinematic media bands, mono utility labels, and restrained accent color. |
+| **[`framed-grid-layout`](skills/framed-grid-layout.md)** | Create minimal framed grid layouts with thin visible boundary lines, L-shaped corner brackets, subtle diagonal line texture, and strict section alignment. Use when asked for cle... |
+| **[`framed-tech-dark-border-gradient`](skills/framed-tech-dark-border-gradient.md)** | Create a framed dark technical design system with border-gradient shells, asymmetrical grid panels, mono utility labeling, and restrained monochrome atmosphere. |
+| **[`funky-purple-container-tech`](skills/funky-purple-container-tech.md)** | Create a dark container-led technical design system with fuchsia-purple accents, layered rounded shells, crisp frame lines, and playful futuristic focal objects. |
+| **[`glass-dark-mode-clock`](skills/glass-dark-mode-clock.md)** | Create a dark glass design system with frosted shells, soft beam grids, circular clock-like calibration dials, and precise sci-fi instrument framing. |
+| **[`glass-dark-ui`](skills/glass-dark-ui.md)** | Build dark-mode glassmorphism interfaces with readable contrast, frosted surfaces, and gradient borders using a pseudo-element mask. Use when asked for glass cards, frosted dark... |
+| **[`gooey-blob-system`](skills/gooey-blob-system.md)** | Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter ... |
+| **[`ui-ux-pro-max`](skills/ui-ux-pro-max.md)** | AI-powered design intelligence with 84 UI styles, 192 color palettes, 74 font pairings, 98 UX guidelines, and 25 chart types across 22 tech stacks. |
+
+### Creative Motion, Shaders & WebGL 3D
+
+| Skill | Description |
+| :--- | :--- |
+| **[`add-mouse-driven-orbit`](skills/add-mouse-driven-orbit.md)** | Add restrained mouse-driven orbit and parallax depth to a Three.js hero by damping one pointer target and splitting it across camera translation, look-at, and small object rotat... |
+| **[`add-shader-cursor-trail`](skills/add-shader-cursor-trail.md)** | Add the Shaders WebGPU mouse effect used for the Tidal Commons hero: a white twinkling halftone cursor trail driven by ChromaFlow, masked through a DotGrid, finished with chroma... |
+| **[`ambient-section-particles`](skills/ambient-section-particles.md)** | Add a restrained particle atmosphere inside one section with configurable shapes, density, gravity, wind, sway, rotation, recycling or settling, pointer disturbance, visibility ... |
+| **[`animation-on-scroll`](skills/animation-on-scroll.md)** | Create an on-scroll animation trigger using IntersectionObserver with Tailwind-friendly animation classes and keyframes. Use when asked for scroll-reveal, animate-on-scroll, or ... |
+| **[`animation-systems`](skills/animation-systems.md)** | Use when designing or implementing product-grade web motion like Stripe, Linear, Apple, and Vercel. Covers motion principles, easing/duration defaults, choreography patterns, sc... |
+| **[`atmosphere-background`](skills/atmosphere-background.md)** | Create a dark atmospheric background with drifting vertical light folds, screen-blended glow, and a concentrated luminous corner or lower-edge bloom. |
+| **[`background-grid-webgl`](skills/background-grid-webgl.md)** | Create a perspective WebGL background grid with fading lines, subtle particle haze, slow forward drift, and gentle camera parallax. |
+| **[`beam-glow-states`](skills/beam-glow-states.md)** | Create React loading, processing, selected, current, focus, and pressed states with the border-beam package's animated edge glow. Use when a card, button, input, tab, option, ta... |
+| **[`build-awwwards-quality-sites`](skills/build-awwwards-quality-sites.md)** | Art-direct and implement distinctive, motion-rich marketing, editorial, portfolio, and landing websites with original reference-inspired imagery, standout heroes, GSAP choreogra... |
+| **[`build-interactive-particle-trail`](skills/build-interactive-particle-trail.md)** | Build a cursor or touch particle interaction that emits by distance along the traveled segment into a recycled GPU point pool, with optional keyboard-triggered bursts. Use for i... |
+| **[`build-threejs-scroll-worlds`](skills/build-threejs-scroll-worlds.md)** | Build rich, scroll-controlled real-time Three.js experiences as one persistent 3D world whose camera, lighting, atmosphere, materials, objects, DOM story, and interactions evolv... |
+| **[`build-wireframe-scan-reveal`](skills/build-wireframe-scan-reveal.md)** | Reveal Three.js geometry with an expanding world-space scan whose wire cage leads the solid surface, then burns away. Use for wireframe scanning, radial mesh reveals, survey pul... |
+| **[`cinematic-gsap-lenis-motion-system`](skills/cinematic-gsap-lenis-motion-system.md)** | Create premium cinematic web motion systems with GSAP, ScrollTrigger, and Lenis. Use for luxury editorial websites, creative studio portfolios, Awwwards-style interactions, smoo... |
+| **[`cinematic-scroll-storytelling`](skills/cinematic-scroll-storytelling.md)** | Create cinematic scroll-driven landing pages with Lenis smooth scrolling, GSAP ScrollTrigger, scroll-linked progression, staggered text reveals, sticky card stacks, parallax bac... |
+| **[`cobejs`](skills/cobejs.md)** | Use when adding a lightweight interactive globe with cobe (canvas setup, markers, interaction, performance, integration with React/Next.js). |
+| **[`falling-leaves`](skills/falling-leaves.md)** | Build falling leaves that read as leaves, with each one tumbling on its own axis so it presents a face, thins to an edge, and opens out again, and with its sideways slip driven ... |
+| **[`globe-gl`](skills/globe-gl.md)** | Use when implementing globe.gl (Globe.GL) for 3D globe data visualization with WebGL/ThreeJS, including setup, data layers (points, arcs, polygons, labels), and integration patt... |
+| **[`globe-particles`](skills/globe-particles.md)** | Create a globe-like 3D particle visualization with a dense luminous spherical core and thinner orbital ring or flattened disc. Use when a design needs a premium planetary, orbit... |
+| **[`gsap-scrolltrigger-storytelling`](skills/gsap-scrolltrigger-storytelling.md)** | Build cinematic sticky product storytelling with GSAP ScrollTrigger, progressive UI reveals, scroll-synced animation, smooth interpolation, and immersive section transitions. |
+| **[`optimize-web-animations`](skills/optimize-web-animations.md)** | Profile, audit, and optimize frontend page performance with emphasis on animation work, memory-leak risks, long-session slowdowns, CSS animations, canvas/WebGL requestAnimationF... |
+
+### Game Development & Three.js Systems
+
+| Skill | Description |
+| :--- | :--- |
+| **[`author-game-levels`](skills/author-game-levels.md)** | Author or revise readable, flat-world Three.js game levels. Use for movement and camera routes, collision and navigation, encounter zones, landmarks, objectives, pickups, motiva... |
+| **[`build-game-audio-feedback`](skills/build-game-audio-feedback.md)** | Design or implement responsive audio feedback for a Three.js or web game. Use for action sounds, combat layers, music states, spatial audio, mix priorities, mute controls, acces... |
+| **[`build-game-camera-controls`](skills/build-game-camera-controls.md)** | Implement or tune Three.js game cameras. Use for isometric framing, follow behavior, orbit/zoom limits, occlusion, lock-on, camera shake, touch camera controls, and camera regre... |
+| **[`build-game-changelog`](skills/build-game-changelog.md)** | Design, implement, backfill, audit, and release in-game changelogs with contiguous versioning, deployment provenance, menu-state navigation, accessible toggle, close, and Escape... |
+| **[`build-game-inventory`](skills/build-game-inventory.md)** | Build or repair game inventory, loot, equipment, tooltips, drag-and-drop, persistence, and progression systems. Use for item schemas, pickup flows, stack rules, equipment slots,... |
+| **[`build-game-map-editor`](skills/build-game-map-editor.md)** | Build, extend, or audit production-linked browser map editors for Three.js and isometric games. Use when Codex needs to create a private director view, derive a versioned editor... |
+| **[`build-game-monster-system`](skills/build-game-monster-system.md)** | Build, integrate, audit, or refactor rigged monsters for Three.js and web action games. Use for monster asset contracts, procedural or imported creature rigs, semantic joints an... |
+| **[`build-hybrid-game-assets`](skills/build-hybrid-game-assets.md)** | Plan, create, integrate, or audit a hybrid asset pipeline for a Three.js or web game. Use when choosing among imported meshes, procedural 3D geometry, AI-generated reference art... |
+| **[`build-isometric-arpg`](skills/build-isometric-arpg.md)** | Build or extend a playable isometric action RPG in Three.js, React, or similar web technology. Use for game-loop architecture, camera and movement, zones, combat integration, co... |
+| **[`build-mobile-threejs-games`](skills/build-mobile-threejs-games.md)** | Build, tune, or test a Three.js game for mobile web. Use for touch movement, action controls, target selection, touch inventory, safe areas, portrait/landscape layouts, responsi... |
+| **[`build-rigged-game-assets`](skills/build-rigged-game-assets.md)** | Create, integrate, or audit production-ready rigged 3D characters and monsters with a main model, skeleton, animation library, sockets, collision contracts, separate character e... |
+| **[`build-threejs-enemy-systems`](skills/build-threejs-enemy-systems.md)** | Build or refactor reusable, data-driven enemy archetype and moveset systems for Three.js action games. Use for enemy content schemas, model and rig conventions, combat move timi... |
+| **[`build-vesperfall-review-assets`](skills/build-vesperfall-review-assets.md)** | Build truthful Vesperfall asset-library review pairs from transparent PNG references and live Three.js, FBX, or img2threejs models. Use when adding a character, enemy, prop, or ... |
+| **[`create-game-vfx`](skills/create-game-vfx.md)** | Create readable, performance-safe Three.js game visual effects. Use for attacks, impacts, damage feedback, status effects, spell trails, particles, shaders, telegraphs, quality ... |
+| **[`design-action-combat`](skills/design-action-combat.md)** | Design, implement, tune, or test readable tactical action combat for web games. Use for attack timing, guard and dodge windows, hit contact, posture, lock-on, weapons, boss phas... |
+| **[`design-game-encounters`](skills/design-game-encounters.md)** | Design, implement, tune, or test Three.js action-game encounters. Use for arena layout, enemy composition, spawn pacing, objectives, boss phases, reward cadence, encounter fixtu... |
+| **[`implement-fog-of-war`](skills/implement-fog-of-war.md)** | Implement, tune, debug, or validate soft wall-aware fog of war and gameplay perception in Three.js action games. Use for orthographic or isometric visibility masks, obstacle-awa... |
+| **[`optimize-threejs-games`](skills/optimize-threejs-games.md)** | Profile, diagnose, and improve Three.js or WebGL game performance without regressing gameplay. Use for frame-time drops, CPU/GPU pressure, draw calls, texture and geometry budge... |
+| **[`ship-web-games`](skills/ship-web-games.md)** | Package, deploy, and verify a playable Three.js or web game. Use for release builds, asset delivery, private/public deployment, production smoke tests, browser proof, release no... |
+| **[`test-playable-web-games`](skills/test-playable-web-games.md)** | Test a playable browser game end to end with deterministic fixtures and real browser evidence. Use for gameplay QA, regression testing, controls, accessibility, responsive/mobil... |
+| **[`tune-enemy-ai`](skills/tune-enemy-ai.md)** | Build, debug, balance, or test combat enemy AI for playable action games. Use for aggro, target selection, navigation, spacing, attack choices, telegraphs, retreats, boss behavi... |
+
+### Audit, Quality & Anti-Slop Safeguards
+
+| Skill | Description |
+| :--- | :--- |
+| **[`audit-ai-design-slop`](skills/audit-ai-design-slop.md)** | Audit websites, apps, screenshots, mockups, and design code for harmful AI-design clichés, generic generated defaults, and established UI defects. Use when the user wants eviden... |
+| **[`audit-reference-originality`](skills/audit-reference-originality.md)** | Audit a website or digital experience against its supplied source references for originality and plagiarism risk. Use when Codex must compare current or historical site output w... |
+| **[`audit-verify-explain-grade-5`](skills/audit-verify-explain-grade-5.md)** | Audit work, verify claims with concrete evidence, and explain the result in simple grade-5 language. Use when the user asks to review, audit, check, verify, explain a change, ex... |
+| **[`no-ai-design-slop`](skills/no-ai-design-slop.md)** | Prevent and remove generic AI-generated design defaults, incoherent visual choices, and established UI defects while creating, revising, or reviewing websites, apps, screenshots... |
+| **[`iterate-until-verified`](skills/iterate-until-verified.md)** | Apply a prompt-agnostic execution and verification loop to any substantial task while preserving the original request. Use when the user asks to fan out work, use subagents or i... |
+| **[`performance-profiling`](skills/performance-profiling.md)** | Guide performance profiling for Apple platform apps with Instruments, Xcode diagnostics, and MetricKit. Use when investigating app hangs, stutters, high CPU, memory leaks, memor... |
+| **[`stitched-full-page-capture`](skills/stitched-full-page-capture.md)** | Capture or repair reliable full-page screenshots for lazy-loaded, scroll-animated, Framer, WebGL/canvas, or reveal-heavy web pages. Use when full-page screenshots are blank, gra... |
+
+### Creative Sourcing, Media & Generation
+
+| Skill | Description |
+| :--- | :--- |
+| **[`aura-asset-images`](skills/aura-asset-images.md)** | Use when you need high-quality stock-style images from Aura Assets (aura.build/assets) similar to Unsplash for design mockups and marketing: backgrounds, abstract wallpapers, ar... |
+| **[`company-logos`](skills/company-logos.md)** | Use Iconify Simple Icons logos (64x64) instead of text logos. |
+| **[`design-first-ui-prompting`](skills/design-first-ui-prompting.md)** | Use when you need design-first, spec-driven, skimmable prompts for UI generation. Covers prompt structure, constraints, variations, typography/spacing rules, and iteration workf... |
+| **[`elevenlabs-tts`](skills/elevenlabs-tts.md)** | Generate ElevenLabs text-to-speech audio from scripts or inline text using local voice profiles. Use when the user asks for ElevenLabs, text-to-speech, TTS, narration, voiceover... |
+| **[`generate-reference-inspired-brand-worlds`](skills/generate-reference-inspired-brand-worlds.md)** | Generate multiple original brand campaign worlds from a supplied visual reference while controlling how close the new work feels without copying protected signature elements. Us... |
+| **[`unsplash-asset-images`](skills/unsplash-asset-images.md)** | Use when you need to pick high-quality Unsplash images for product/design assets (avatars, headshots, portraits, large website backgrounds, and abstract wallpapers) and output r... |
+| **[`video-to-superprompt`](skills/video-to-superprompt.md)** | Turn a reference video into a super detailed recreation or inspiration prompt. Use when the user provides, mentions, uploads, links, or points to a video and asks to analyze the... |
+| **[`html-to-interaction-prompts`](skills/html-to-interaction-prompts.md)** | Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple reusable interaction prompts. Use when the user provides an HTML fi... |
+| **[`article-prompts-to-skills`](skills/article-prompts-to-skills.md)** | Convert an article, tutorial, or prompt pack into focused reusable AgentSkills, one independent capability per skill, with portable instructions, example prompts, working demos,... |
+| **[`build-daily-inspiration-sites`](skills/build-daily-inspiration-sites.md)** | Turn a completed daily UI inspiration capture into exactly five original landing-page builds, one per separate Codex task, using Sites. Use when the user asks to turn the daily ... |
+| **[`daily-ui-inspiration-capture`](skills/daily-ui-inspiration-capture.md)** | Create a recurring daily UI inspiration capture. Use when the user asks to run, refresh, package, or validate dated UI inspiration bundles, especially for `articles/YYYY-MM-DD-u... |
+| **[`write-like-meng-on-x`](skills/write-like-meng-on-x.md)** | Write, rewrite, review, or continuously refine X/Twitter posts in Meng To's current voice using his deduplicated authored-post corpus, personal and product context, shared resou... |
+| **[`x-bookmark-quote-posts`](skills/x-bookmark-quote-posts.md)** | Check a user's latest X/Twitter bookmarks and turn recent saved posts into source-backed quote-post drafts calibrated against the user's latest 100 authored posts. Use when aske... |
+| **[`browser-video-recording`](skills/browser-video-recording.md)** | Create polished 60 fps 4:3 4K browser screen-recording style videos from Codex in-app browser captures, with browser-only crop, natural macOS cursor styling, deliberate click ch... |
+| **[`web-technique-to-skill`](skills/web-technique-to-skill.md)** | Turn a visual or interaction technique you already built into a reusable web-design skill, by isolating the one mechanism that makes it work while reproducing its approved refer... |
+
+### Antigravity IDE & System Orchestration
+
+| Skill | Description |
+| :--- | :--- |
+| **[`agy-customizations`](skills/agy-customizations.md)** | Comprehensive guide and reference for the Antigravity Customization System. Use to explain how customizations work, their loading priority, discovery mechanisms, and to guide th... |
+| **[`antigravity-guide`](skills/antigravity-guide.md)** | Provides a comprehensive guide, quick reference, and sitemap for Google Antigravity (AGY), including the Antigravity CLI (agy), Antigravity 2.0, Antigravity IDE, Python SDK, sla... |
+| **[`credentials`](skills/credentials.md)** | Instructions for handling API keys and credentials safely, verifying their presence, and prompting the user to add them if missing using a safe protocol. |
+| **[`hide-agent-reasoning`](skills/hide-agent-reasoning.md)** | Keeps the agent's internal reasoning, chain-of-thought, or planning narration out of the visible chat response. Use for every reply, especially with Gemini models (3.5 Flash, 3 ... |
+| **[`permissioned-github`](skills/permissioned-github.md)** | Guidelines for interacting with GitHub and request permissions from the user when commands fail due to restrictions in the agent environment. |
+| **[`predictingthepast`](skills/predictingthepast.md)** | Ancient text restoration, attribution, dating, contextualization, and embedding via Aeneas (Latin) / Ithaca (Ancient Greek). Use when asked to "restore", "attribute", "date", "c... |
+| **[`publish-project-to-github`](skills/publish-project-to-github.md)** | Package a finished local project into an intentional GitHub repository, create a strong README and visual preview, push it safely, configure a public GitHub Pages URL when the p... |
+| **[`start-teardown`](skills/start-teardown.md)** | Launches the Teardown full-stack application (FastAPI backend on port 8000 + Next.js frontend on port 3005) and automatically opens the app in the user's default browser. Trigge... |
+
+
 ---
 
 ## 👥 Specialist Personas
@@ -161,9 +296,10 @@ The [`prompts/`](prompts/) directory contains a curated library of clean, date-s
 | Model Family | Prompts |
 | :--- | :--- |
 | **Antigravity** | [`antigravity prompt.md`](prompts/antigravity/antigravity%20prompt.md) |
+| **Cursor** | [`cursor prompt.md`](prompts/cursor/cursor%20prompt.md), [`cursor tools.md`](prompts/cursor/cursor%20tools.md) |
 | **Claude** | [`claude opus 5 prompt.txt`](prompts/claude/claude%20opus%205%20prompt.txt), [`claude 4.7 opus prompt.txt`](prompts/claude/claude%204.7%20opus%20prompt.txt), [`claude 4.6 sonnet prompt.txt`](prompts/claude/claude%204.6%20sonnet%20prompt.txt), [`claude code prompt.md`](prompts/claude/claude%20code%20prompt.md) |
 | **ChatGPT** | [`chatgpt gpt 5.6 sol prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.6%20sol%20prompt.md), [`chatgpt gpt 5.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.5%20prompt.md), [`chatgpt gpt 5.4 prompt.md`](prompts/chatgpt/chatgpt%20gpt%205.4%20prompt.md), [`chatgpt gpt 4.5 prompt.md`](prompts/chatgpt/chatgpt%20gpt%204.5%20prompt.md), [`chatgpt gpt 4o prompt.txt`](prompts/chatgpt/chatgpt%20gpt%204o%20prompt.txt), [`chatgpt o3 o4 mini prompt.txt`](prompts/chatgpt/chatgpt%20o3%20o4%20mini%20prompt.txt) |
-| **Gemini** | [`gemini 3.6 flash prompt.md`](prompts/gemini/gemini%203.6%20flash%20prompt.md), [`gemini 3.5 flash prompt.md`](prompts/gemini/gemini%203.5%20flash%20prompt.md), [`gemini 3.1 pro prompt.md`](prompts/gemini/gemini%203.1%20pro%20prompt.md), [`gemini 2.5 pro prompt.md`](prompts/gemini/gemini%202.5%20pro%20prompt.md) |
+| **Gemini** | [`gemini 3.8 flash prompt.md`](prompts/gemini/gemini%203.8%20flash%20prompt.md), [`gemini 3.6 flash prompt.md`](prompts/gemini/gemini%203.6%20flash%20prompt.md), [`gemini 3.5 flash prompt.md`](prompts/gemini/gemini%203.5%20flash%20prompt.md), [`gemini 3.1 pro prompt.md`](prompts/gemini/gemini%203.1%20pro%20prompt.md), [`gemini 2.5 pro prompt.md`](prompts/gemini/gemini%202.5%20pro%20prompt.md) |
 | **Grok** | [`grok 4.5 prompt.txt`](prompts/grok/grok%204.5%20prompt.txt), [`grok 5.0 prompt.txt`](prompts/grok/grok%205.0%20prompt.txt), [`grok 4.1 prompt.txt`](prompts/grok/grok%204.1%20prompt.txt), [`grok 3 prompt.md`](prompts/grok/grok%203%20prompt.md) |
 | **Llama** | [`llama muse spark 1.2 prompt.txt`](prompts/llama/llama%20muse%20spark%201.2%20prompt.txt), [`llama 5 prompt.txt`](prompts/llama/llama%205%20prompt.txt), [`llama 4 whatsapp prompt.txt`](prompts/llama/llama%204%20whatsapp%20prompt.txt) |
 | **DeepSeek** | [`deepseek v4 flash prompt.md`](prompts/deepseek/deepseek%20v4%20flash%20prompt.md), [`deepseek r1 prompt.md`](prompts/deepseek/deepseek%20r1%20prompt.md), [`deepseek v3 prompt.md`](prompts/deepseek/deepseek%20v3%20prompt.md) |
@@ -367,7 +503,7 @@ description: Brief description of the skill.
 ├── skills/
 │   ├── idea-refine/                 # idea-refine support assets (examples, frameworks, etc.)
 │   ├── reverse-engineering-skill/   # reverse-engineering support assets (SETUP.md, scripts, etc.)
-│   └── ... (86 restructured .md skill files directly in skills/)
+│   └── ... (184 restructured .md skill files directly in skills/)
 ├── references/                  # Supplementary checklists
 ├── agents/                      # Specialist personas
 ├── commands/                    # Antigravity CLI commands

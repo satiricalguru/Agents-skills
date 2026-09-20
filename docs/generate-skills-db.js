@@ -7,7 +7,7 @@ if (!fs.existsSync(SKILLS_DIR)) {
 }
 const OUTPUT_FILE = path.join(__dirname, 'skills.json');
 
-// Exact mapping from screenshots
+// Exact mapping from screenshots & core priorities
 const screenshotMapping = {
   // High Priority
   'security-and-hardening': { category: 'high', priority: 1, why: 'OWASP Top 10, auth patterns, secrets management — should be active on every project touching user data' },
@@ -41,6 +41,59 @@ const screenshotMapping = {
   'uv': { category: 'situational', priority: 11, why: 'If you use Python — fast package manager workflow' },
   'web-scraper': { category: 'situational', priority: 12, why: 'Intelligent adaptive web scraping, traffic interception, anti-blocking, and Apify Actor creation' }
 };
+
+// Skill groups classification
+const FRONTEND_UI_SKILLS = new Set([
+  'agency-grid-layout-minimal', 'beautiful-shadows', 'blue-cloudy-clean-modern',
+  'blue-laser-clean-glass-layout', 'book-serif-index', 'bright-green-tech-system-webgl',
+  'clean-minimal-beige-light-mode', 'container-lines', 'corner-diagonals', 'corner-lasers',
+  'css-alpha-masking', 'css-border-gradient', 'dark-blue-contrasting-clean',
+  'dark-glass-clean-layout', 'dither-background', 'dither-laser-dark-mode',
+  'documentary-brutalist-agency', 'editorial-portfolio-chapters', 'editorial-service-booking',
+  'editorial-tech', 'framed-grid-layout', 'framed-tech-dark-border-gradient',
+  'funky-purple-container-tech', 'glass-dark-mode-clock', 'glass-dark-ui',
+  'gooey-blob-system', 'ui-ux-pro-max', 'frontend-ui-engineering', 'modern-web-guidance'
+]);
+
+const WEBGL_3D_SKILLS = new Set([
+  'add-mouse-driven-orbit', 'add-shader-cursor-trail', 'ambient-section-particles',
+  'animation-on-scroll', 'animation-systems', 'atmosphere-background',
+  'background-grid-webgl', 'beam-glow-states', 'build-awwwards-quality-sites',
+  'build-interactive-particle-trail', 'build-threejs-scroll-worlds', 'build-wireframe-scan-reveal',
+  'cinematic-gsap-lenis-motion-system', 'cinematic-scroll-storytelling', 'cobejs',
+  'falling-leaves', 'globe-gl', 'globe-particles', 'gsap-scrolltrigger-storytelling',
+  'optimize-web-animations'
+]);
+
+const GAMEDEV_SKILLS = new Set([
+  'author-game-levels', 'build-game-audio-feedback', 'build-game-camera-controls',
+  'build-game-changelog', 'build-game-inventory', 'build-game-map-editor',
+  'build-game-monster-system', 'build-hybrid-game-assets', 'build-isometric-arpg',
+  'build-mobile-threejs-games', 'build-rigged-game-assets', 'build-threejs-enemy-systems',
+  'build-vesperfall-review-assets', 'create-game-vfx', 'design-action-combat',
+  'design-game-encounters', 'implement-fog-of-war', 'optimize-threejs-games',
+  'ship-web-games', 'test-playable-web-games', 'tune-enemy-ai'
+]);
+
+const AUDIT_QUALITY_SKILLS = new Set([
+  'audit-ai-design-slop', 'audit-reference-originality', 'audit-verify-explain-grade-5',
+  'no-ai-design-slop', 'iterate-until-verified', 'performance-profiling',
+  'stitched-full-page-capture'
+]);
+
+const CREATIVE_MEDIA_SKILLS = new Set([
+  'aura-asset-images', 'company-logos', 'design-first-ui-prompting', 'elevenlabs-tts',
+  'generate-reference-inspired-brand-worlds', 'unsplash-asset-images', 'video-to-superprompt',
+  'html-to-interaction-prompts', 'article-prompts-to-skills', 'build-daily-inspiration-sites',
+  'daily-ui-inspiration-capture', 'write-like-meng-on-x', 'x-bookmark-quote-posts',
+  'browser-video-recording', 'web-technique-to-skill'
+]);
+
+const SYSTEM_SKILLS = new Set([
+  'agy-customizations', 'antigravity-guide', 'google-antigravity-sdk',
+  'permissioned-github', 'hide-agent-reasoning', 'publish-project-to-github',
+  'start-teardown', 'using-agent-skills', 'no-excuses-executor'
+]);
 
 // Parse a single Markdown file with frontmatter
 function parseMarkdownFile(filePath) {
@@ -103,7 +156,6 @@ function parseMarkdownFile(filePath) {
             blockStyle = val;
             return;
           }
-          // Clean quotes if present
           const cleanedVal = val.replace(/^["']|["']$/g, '').trim();
           if (key === 'name') metadata.name = cleanedVal;
           if (key === 'description') metadata.description = cleanedVal;
@@ -113,27 +165,48 @@ function parseMarkdownFile(filePath) {
     }
   }
 
-  // Determine Category, Priority, and Screenshot Description
+  // Determine Category, Priority, and Description
   const matched = screenshotMapping[filename];
   if (matched) {
     metadata.category = matched.category;
     metadata.priority = matched.priority;
     metadata.why = matched.why;
+  } else if (FRONTEND_UI_SKILLS.has(filename)) {
+    metadata.category = 'specialized-frontend-ui';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Modern web design, layout systems, and CSS styling architectures';
+  } else if (WEBGL_3D_SKILLS.has(filename)) {
+    metadata.category = 'specialized-webgl-3d';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Creative web motion, GSAP animations, WebGL shaders & Three.js 3D';
+  } else if (GAMEDEV_SKILLS.has(filename)) {
+    metadata.category = 'specialized-gamedev';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Web game development, combat systems, 3D asset workflows & level design';
+  } else if (AUDIT_QUALITY_SKILLS.has(filename)) {
+    metadata.category = 'specialized-audit-quality';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Anti-slop design gates, evidence-based audits & originality verification';
+  } else if (CREATIVE_MEDIA_SKILLS.has(filename)) {
+    metadata.category = 'specialized-creative-media';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Asset sourcing, daily UI inspiration, TTS narration & superprompts';
+  } else if (SYSTEM_SKILLS.has(filename)) {
+    metadata.category = 'specialized-system';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Antigravity IDE customizations, agent orchestration & lifecycle hooks';
+  } else if (filename.includes('database') || filename.includes('literature') || filename.includes('protein') || ['alphafold-database-fetch-and-analyze', 'chembl-database', 'clinical-trials-database', 'clinvar-database', 'credentials', 'dbsnp-database', 'embl-ebi-ols', 'encode-ccres-database', 'ensembl-database', 'foldseek-structural-search', 'gnomad-database', 'gtex-database', 'human-protein-atlas-database', 'interpro-database', 'jaspar-database', 'ncbi-sequence-fetch', 'opentargets-database', 'pdb-database', 'predictingthepast', 'pubchem-database', 'pubmed-database', 'quickgo-database', 'reactome-database', 'string-database', 'ucsc-conservation-and-tfbs', 'unibind-database', 'uniprot-database'].includes(filename)) {
+    metadata.category = 'specialized-science';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Biological and bioinformatics research databases & scientific tools';
+  } else if (filename.includes('firebase') || filename === 'supabase' || filename === 'mongodb' || filename === 'chrome-extensions' || filename === 'chrome-devtools') {
+    metadata.category = 'specialized-platforms';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'Specific database, backend hosting or platform SDK integrations';
   } else {
-    // If not in screenshots, categorize based on directories or name
-    if (filename.includes('database') || filename.includes('literature') || filename.includes('protein') || ['alphafold-database-fetch-and-analyze', 'chembl-database', 'clinical-trials-database', 'clinvar-database', 'dbsnp-database', 'embl-ebi-ols', 'encode-ccres-database', 'ensembl-database', 'foldseek-structural-search', 'gnomad-database', 'gtex-database', 'human-protein-atlas-database', 'interpro-database', 'jaspar-database', 'ncbi-sequence-fetch', 'opentargets-database', 'pdb-database', 'pubchem-database', 'pubmed-database', 'quickgo-database', 'reactome-database', 'string-database', 'ucsc-conservation-and-tfbs', 'unibind-database', 'uniprot-database'].includes(filename)) {
-      metadata.category = 'specialized-science';
-      metadata.priority = 100;
-      metadata.why = 'Biological and bioinformatics research databases & tools';
-    } else if (filename.includes('firebase') || filename === 'supabase' || filename === 'mongodb') {
-      metadata.category = 'specialized-platforms';
-      metadata.priority = 100;
-      metadata.why = 'Specific database or backend hosting platforms';
-    } else {
-      metadata.category = 'specialized-utility';
-      metadata.priority = 100;
-      metadata.why = 'General coding utilities and helper scripts';
-    }
+    metadata.category = 'specialized-utility';
+    metadata.priority = 100;
+    metadata.why = metadata.description || 'General coding utilities, development patterns, and helper workflows';
   }
 
   metadata.content = rawContent;
@@ -165,7 +238,20 @@ function run() {
   // Sort by category and priority
   skills.sort((a, b) => {
     if (a.category !== b.category) {
-      const catOrder = { 'high': 1, 'medium': 2, 'situational': 3, 'specialized-platforms': 4, 'specialized-science': 5, 'specialized-utility': 6 };
+      const catOrder = {
+        'high': 1,
+        'medium': 2,
+        'situational': 3,
+        'specialized-frontend-ui': 4,
+        'specialized-webgl-3d': 5,
+        'specialized-gamedev': 6,
+        'specialized-audit-quality': 7,
+        'specialized-creative-media': 8,
+        'specialized-platforms': 9,
+        'specialized-science': 10,
+        'specialized-system': 11,
+        'specialized-utility': 12
+      };
       return (catOrder[a.category] || 99) - (catOrder[b.category] || 99);
     }
     return a.priority - b.priority;
