@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agent Skills Hub — Optimize Your Coding Agent</title>
+  <title>AI Agent Skills Hub</title>
+  <meta name="description" content="184 production-grade skills for AI coding agents. Pick workflows and export one rules file for Claude Code, Cursor, Windsurf, Gemini or ChatGPT.">
+  <meta name="theme-color" content="#09090b">
   <!-- Tailwind CSS (for layout helper utilities if needed, custom CSS for full glow and styles) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts & FontAwesome -->
@@ -14,7 +16,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="index.css">
   <!-- Markdown parser library -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 </head>
 <body>
 
@@ -31,7 +33,8 @@
     <!-- Search -->
     <div class="search-bar">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" id="searchInput" placeholder="Search skills, commands, rules...">
+      <input type="text" id="searchInput" placeholder="Search 184 skills…" aria-label="Search skills">
+      <kbd>/</kbd>
     </div>
 
     <!-- Header Actions -->
@@ -57,7 +60,19 @@
     <!-- Skills workspace (Left Area) -->
     <div class="skills-workspace">
       
-      <!-- Primary columns matching user's screenshots -->
+      <section class="hero">
+        <span class="hero-eyebrow"><span class="dot"></span>Open source · works with Claude, Codex, Cursor, Gemini</span>
+        <h2>Senior-engineer habits, <em>bundled</em> for your coding agent.</h2>
+        <p class="lede">Pick the workflows you want your agent to follow, from TDD and security hardening to WebGL and game dev, and export one rules file for your editor.</p>
+        <div class="hero-stats">
+          <div><b id="statSkills">184</b><span>Skills</span></div>
+          <div><b id="statCategories">12</b><span>Categories</span></div>
+          <div><b>5</b><span>Export targets</span></div>
+          <div><b id="statSelected">0</b><span>In your bundle</span></div>
+        </div>
+      </section>
+
+      <!-- Core priority columns -->
       <div class="columns-grid">
         
         <!-- High Priority Column -->
@@ -65,6 +80,7 @@
           <div class="column-header">
             <span class="column-indicator"></span>
             <h2>High Priority</h2>
+            <span class="column-count" id="countHigh"></span>
           </div>
           <p class="column-subtitle">Core Dev Workflow (Add These First)</p>
           <div class="space-y-4" id="highSkillsContainer">
@@ -77,6 +93,7 @@
           <div class="column-header">
             <span class="column-indicator"></span>
             <h2>Medium Priority</h2>
+            <span class="column-count" id="countMedium"></span>
           </div>
           <p class="column-subtitle">Quality & Architecture (Prevent Technical Debt)</p>
           <div class="space-y-4" id="mediumSkillsContainer">
@@ -89,6 +106,7 @@
           <div class="column-header">
             <span class="column-indicator"></span>
             <h2>Situational</h2>
+            <span class="column-count" id="countSituational"></span>
           </div>
           <p class="column-subtitle">Use When Relevant to Your Tech Stack</p>
           <div class="space-y-4" id="situationalSkillsContainer">
@@ -100,7 +118,8 @@
 
       <!-- Specialized / Platform Integrations (Bottom Area) -->
       <div class="specialized-section">
-        <h2>Specialized Integrations, Creative WebGL, Game Dev & Scientific Tools</h2>
+        <h2>Specialized library</h2>
+        <p class="section-sub">Frontend systems, WebGL &amp; 3D, game dev, science, platforms and more. Add only what matches your stack.</p>
         <div class="specialized-grid" id="specializedSkillsContainer">
           <!-- Dynamic platform/science skills list -->
         </div>
@@ -302,6 +321,8 @@
       </div>
     </div>
   </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><i class="fa-solid fa-circle-check"></i><span></span></div>
 
   <script src="app.js"></script>
 </body>

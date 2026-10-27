@@ -44,6 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnWizardBack = document.getElementById('btnWizardBack');
   const wizardSteps = document.querySelectorAll('.wizard-step');
 
+  // Lightweight toast notifications
+  const toastEl = document.getElementById('toast');
+  let toastTimer;
+  function toast(message, isError = false) {
+    toastEl.querySelector('span').textContent = message;
+    toastEl.querySelector('i').className = isError ? 'fa-solid fa-circle-exclamation' : 'fa-solid fa-circle-check';
+    toastEl.classList.toggle('error', isError);
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 3200);
+  }
+
   // Load Skills Database
   async function loadSkills() {
     try {
@@ -62,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCompilation();
     } catch (err) {
       console.error(err);
-      alert('Error loading skills database. Make sure generate-skills-db.js has run.');
+      toast('Could not load the skills database.', true);
     }
   }
 
@@ -84,9 +96,41 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (skill.category === 'situational') {
         situationalContainer.appendChild(card);
       } else {
-        specializedContainer.appendChild(card);
+        groupContainer(skill.category).appendChild(card);
       }
     });
+
+    const count = (cat) => skillsData.filter(s => s.category === cat).length;
+    document.getElementById('countHigh').textContent = count('high');
+    document.getElementById('countMedium').textContent = count('medium');
+    document.getElementById('countSituational').textContent = count('situational');
+    document.getElementById('statSkills').textContent = skillsData.length;
+    document.getElementById('statCategories').textContent = new Set(skillsData.map(s => s.category)).size;
+  }
+
+  // Specialized skills are grouped under a heading per sub-category
+  const groupLabels = {
+    'specialized-frontend-ui': 'Frontend & UI systems',
+    'specialized-webgl-3d': 'WebGL, shaders & 3D',
+    'specialized-gamedev': 'Game development',
+    'specialized-audit-quality': 'Audit & quality',
+    'specialized-creative-media': 'Creative media',
+    'specialized-platforms': 'Platforms & SDKs',
+    'specialized-science': 'Science & research',
+    'specialized-system': 'System orchestration',
+    'specialized-utility': 'Utilities',
+  };
+  function groupContainer(category) {
+    let grid = specializedContainer.querySelector(`[data-group="${category}"]`);
+    if (!grid) {
+      const group = document.createElement('div');
+      group.className = 'spec-group';
+      const label = groupLabels[category] || category.replace(/^specialized-/, '').replace(/-/g, ' ');
+      group.innerHTML = `<h3>${escapeHtml(label)}</h3><div class="spec-group-grid" data-group="${escapeHtml(category)}"></div>`;
+      specializedContainer.appendChild(group);
+      grid = group.querySelector('.spec-group-grid');
+    }
+    return grid;
   }
 
   // Helper: escape HTML for safe interpolation into innerHTML
@@ -219,8 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isSelected) {
       btnDrawerToggleSelect.innerHTML = '<i class="fa-solid fa-minus"></i> <span>Remove from Bundle</span>';
       btnDrawerToggleSelect.classList.remove('btn-primary');
-      btnDrawerToggleSelect.style.backgroundColor = 'hsl(354, 85%, 25%)';
-      btnDrawerToggleSelect.style.borderColor = 'hsl(354, 85%, 45%)';
+      btnDrawerToggleSelect.style.backgroundColor = '';
+      btnDrawerToggleSelect.style.borderColor = 'rgba(248, 113, 113, 0.35)';
     } else {
       btnDrawerToggleSelect.innerHTML = '<i class="fa-solid fa-plus"></i> <span>Add to Bundle</span>';
       btnDrawerToggleSelect.classList.add('btn-primary');
@@ -239,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateCompilation() {
     const count = selectedSkills.size;
     selectedCountBadge.textContent = `${count} selected`;
+    document.getElementById('statSelected').textContent = count;
 
     // Reset Copy button text to match standard state
     btnCopy.innerHTML = '<i class="fa-solid fa-copy"></i> <span>Copy System rules</span>';
@@ -357,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnCopy.style.borderColor = '';
       }, 2000);
     } catch (err) {
-      alert('Failed to copy to clipboard. Please select the text manually.');
+      toast('Copy failed. Select the text manually.', true);
     }
   });
 
@@ -489,6 +534,17 @@ Write-Host "Active skills deployed! Please restart your IDE agent." -ForegroundC
   });
 
   // Search Input Handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput && !/input|textarea|select/i.test(document.activeElement.tagName)) {
+      e.preventDefault();
+      searchInput.focus();
+    } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.blur();
+    }
+  });
+
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
     const cards = document.querySelectorAll('.skill-card');
@@ -504,7 +560,7 @@ Write-Host "Active skills deployed! Please restart your IDE agent." -ForegroundC
                       (skill.category && skill.category.toLowerCase().includes(query));
 
       if (matched || query === '') {
-        card.style.display = 'flex';
+        card.style.display = '';
       } else {
         card.style.display = 'none';
       }
@@ -569,7 +625,7 @@ Write-Host "Active skills deployed! Please restart your IDE agent." -ForegroundC
   btnWizardNext.addEventListener('click', () => {
     // Validate that option is selected
     if (!wizardAnswers[currentWizardStep]) {
-      alert('Please select an option to proceed.');
+      toast('Pick an option to continue.', true);
       return;
     }
 
@@ -653,7 +709,7 @@ Write-Host "Active skills deployed! Please restart your IDE agent." -ForegroundC
     
     // Highlight panel
     const count = selectedSkills.size;
-    alert(`Recommended ${count} skills optimized for your workspace! Review the preview on the right side of the dashboard.`);
+    toast(`${count} skills recommended for your project. Review the bundle on the right.`);
   }
 
   // Run initialization
