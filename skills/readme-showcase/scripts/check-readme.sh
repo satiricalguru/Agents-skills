@@ -6,9 +6,9 @@ refs=$(grep -oE '(src|srcset|href)="[^"]+"|\]\([^)]+\)' "$f" | sed -E 's/^(src|s
 while IFS= read -r r; do
   [ -z "$r" ] && continue
   case "$r" in http*|mailto:*|\#*) continue;; esac
-  p="$dir/${r%%#*}"
+  r=${r%%#*}; p="$dir/$(printf '%b' "${r//%/\\x}")"
   if [ ! -e "$p" ]; then echo "MISSING  $r"; fail=1
-  else
+  elif [ -f "$p" ]; then
     kb=$(( $(wc -c <"$p") / 1024 ))
     [ "$kb" -gt 5120 ] && echo "LARGE    $r (${kb} KB; aim for <5 MB)"
   fi

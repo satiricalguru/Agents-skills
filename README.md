@@ -1,77 +1,124 @@
 <div align="center">
 
-<img src="docs/icon.png" width="100" alt="AI Agents Skills Icon" />
+<a href="https://satiricalguru.github.io/Agents-skills/"><img src="assets/banner.svg" width="100%" alt="Agents Skills — 184 senior-engineer workflows for your AI coding agent"></a>
 
-# AI AGENTS SKILLS
+<p><b>Teach your AI coding agent to work like a senior engineer.</b><br>
+184 battle-tested skills for planning, TDD, security, reviews, WebGL, game dev and more, plus a dashboard that bundles them into one rules file.</p>
 
-### *Supercharge Your Agentic AI Coding Assistants with 184+ Production-Grade Skills, Personas & Workflows*
+<p>
+<a href="https://github.com/satiricalguru/Agents-skills/stargazers"><img src="https://img.shields.io/github/stars/satiricalguru/Agents-skills?style=for-the-badge&logo=github&labelColor=09090b&color=65a30d" alt="Stars"></a>
+<img src="https://img.shields.io/badge/skills-184-65a30d?style=for-the-badge&labelColor=09090b" alt="184 skills">
+<a href="LICENSE"><img src="https://img.shields.io/github/license/satiricalguru/Agents-skills?style=for-the-badge&labelColor=09090b&color=65a30d" alt="MIT license"></a>
+<a href="https://github.com/satiricalguru/Agents-skills/pulls"><img src="https://img.shields.io/badge/PRs-welcome-65a30d?style=for-the-badge&labelColor=09090b" alt="PRs welcome"></a>
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/satiricalguru/Agents-skills/pulls)
-[![Antigravity Compatible](https://img.shields.io/badge/Antigravity-IDE-blueviolet.svg)](#-installation)
-[![Claude Code Ready](https://img.shields.io/badge/Claude--Code-Ready-orange.svg)](#-installation)
-[![Cursor / Windsurf](https://img.shields.io/badge/Cursor%20%2F%20Windsurf-Supported-00d2ff.svg)](#-installation)
-[![Skills Count](https://img.shields.io/badge/Skills-184%2B%20Available-ff69b4.svg)](#%EF%B8%8F-available-skills)
+<p>
+<img src="https://img.shields.io/badge/Claude_Code-09090b?style=flat-square&logo=claude&logoColor=D97757" alt="Claude Code">
+<img src="https://img.shields.io/badge/Codex-09090b?style=flat-square&logo=openai&logoColor=white" alt="Codex">
+<img src="https://img.shields.io/badge/Cursor-09090b?style=flat-square&logo=cursor&logoColor=white" alt="Cursor">
+<img src="https://img.shields.io/badge/Windsurf-09090b?style=flat-square&logo=windsurf&logoColor=white" alt="Windsurf">
+<img src="https://img.shields.io/badge/Gemini_%2F_Antigravity-09090b?style=flat-square&logo=googlegemini&logoColor=8E75B2" alt="Gemini and Antigravity">
+<img src="https://img.shields.io/badge/ChatGPT-09090b?style=flat-square&logo=openai&logoColor=white" alt="ChatGPT">
+</p>
 
-<br/>
+<p>
+<a href="https://satiricalguru.github.io/Agents-skills/"><b>✨ Open the dashboard</b></a> ·
+<a href="#-quick-start"><b>Quick start</b></a> ·
+<a href="#️-available-skills"><b>Browse skills</b></a> ·
+<a href="#-curated-ai-model-prompts"><b>Prompts</b></a>
+</p>
 
-> 🚀 **[TRY THE INTERACTIVE DASHBOARD LIVE!](https://satiricalguru.github.io/Agents-skills/)**
-> 
-> *Browse, mix, and compile custom system instructions for Antigravity IDE, Claude Code, Cursor, Windsurf, and ChatGPT in seconds!*
+<a href="https://satiricalguru.github.io/Agents-skills/"><img src="assets/demo.gif" width="100%" alt="Selecting skills in the dashboard, switching the export target to Claude Code and opening a skill's full guide"></a>
+
+<sub>Pick skills → choose your agent → copy or download one rules file.</sub>
 
 </div>
 
----
+## ✨ Why Agents Skills
 
-<div align="center">
+- 🧠 **Senior habits, on by default.** Spec first, small slices, tests that prove it and reviews before merge, written as instructions your agent actually follows.
+- 🛡️ **Fewer "looks right" bugs.** Security hardening, debugging triage and anti-slop audits stop the agent from guessing.
+- 🎨 **Goes beyond CRUD.** Deep libraries for modern web layout, shaders and WebGL, Three.js game dev, science and platform SDKs.
+- 🔌 **Works with the agent you already use.** Export to Claude Code, Cursor, Windsurf, Gemini/Antigravity or ChatGPT custom instructions.
+- ⚡ **One command to install.** `curl`, `npx` or a plain `git clone`, with no build step.
 
-### 💡 Why AI Agents Skills?
+## 📸 Tour
 
-| 🛠️ **184+ Specialized Skills** | 👥 **4+ Expert Personas** | 📂 **Curated 2026 Prompts** | ⚡ **1-Command Install** |
-| :--- | :--- | :--- | :--- |
-| Modular workflows for TDD, Security, Web Scraping, DevTools & Science | Senior Staff Reviewer, QA Specialist, & Security Auditor personas | Raw system prompts for Antigravity, Claude Opus 5, GPT-5.6 Sol & Gemini 3.6 | Single `curl` script or `npx` command to equip your local agent |
+<table>
+<tr>
+<td width="50%"><img src="assets/dashboard.png" alt="Dashboard with core skills grouped by priority and a live rules preview"><p align="center"><sub><b>Dashboard</b> — core skills by priority, with a live preview of the rules file</sub></p></td>
+<td width="50%"><img src="assets/skill-drawer.png" alt="Drawer showing the full security-and-hardening skill"><p align="center"><sub><b>Skill inspector</b> — read the full guide before you add it</sub></p></td>
+</tr>
+<tr>
+<td width="50%"><img src="assets/recommender.png" alt="Three-question skill recommender wizard"><p align="center"><sub><b>Recommender</b> — three questions, then a bundle tuned to your project</sub></p></td>
+<td width="50%"><img src="assets/skill-library.png" alt="Specialized library grouped into frontend, WebGL, game dev and more"><p align="center"><sub><b>Specialized library</b> — 150+ skills grouped by domain</sub></p></td>
+</tr>
+</table>
 
-</div>
+<details>
+<summary><b>📱 Works on your phone too</b></summary>
+<br>
+<p align="center"><img src="assets/mobile.png" width="320" alt="Dashboard on a phone"></p>
+</details>
 
----
+## 🚀 Quick start
 
-## 📑 Table of Contents
+**Fastest:** open the [dashboard](https://satiricalguru.github.io/Agents-skills/), pick skills and copy the rules into your editor. Nothing to install.
 
-- [Available Skills](#️-available-skills)
-  - [Meta & General Execution](#meta--general-execution)
-  - [Define - Clarify what to build](#define---clarify-what-to-build)
-  - [Plan - Break it down](#plan---break-it-down)
-  - [Build - Write the code](#build---write-the-code)
-  - [Verify - Prove it works](#verify---prove-it-works)
-  - [Review - Quality gates before merge](#review---quality-gates-before-merge)
-  - [Ship - Deploy with confidence](#ship---deploy-with-confidence)
-  - [Specialized Tools & Systems](#specialized-tools--systems)
-  - [Modern Web Design & Layout Systems](#modern-web-design--layout-systems)
-  - [Creative Motion, Shaders & WebGL 3D](#creative-motion-shaders--webgl-3d)
-  - [Game Development & Three.js Systems](#game-development--threejs-systems)
-  - [Audit, Quality & Anti-Slop Safeguards](#audit-quality--anti-slop-safeguards)
-  - [Creative Sourcing, Media & Generation](#creative-sourcing-media--generation)
-  - [Antigravity IDE & System Orchestration](#antigravity-ide--system-orchestration)
-- [Specialist Personas](#-specialist-personas)
-- [Reference Checklists](#-reference-checklists)
-- [Curated AI Model Prompts](#-curated-ai-model-prompts)
-- [Installation](#-installation)
-- [Skill-Specific Setup](#️-skill-specific-setup)
-- [Adding New Skills](#-adding-new-skills)
-- [Global System Skills](#-global-system-skills)
+**Install everything locally** (clones into your agent's plugin folder):
+
+```bash
+curl -sSL https://raw.githubusercontent.com/satiricalguru/Agents-skills/main/install.sh | bash
+```
+
+**Add one skill to Claude Code** (folder skills such as `readme-showcase`):
+
+```bash
+git clone https://github.com/satiricalguru/Agents-skills.git
+cp -r Agents-skills/skills/readme-showcase ~/.claude/skills/
+```
+
+More options, including npx and manual install, are in [Installation](#-installation).
+
+## 🧠 How it works
+
+```mermaid
+flowchart LR
+  A["skills/*.md<br/>184 skills"] --> B["docs/generate-skills-db.js"]
+  B --> C["skills.json"]
+  C --> D["Dashboard<br/>pick + preview"]
+  D --> E[".cursorrules · .clauderc · .windsurfrules<br/>Gemini · ChatGPT"]
+  A --> F["install.sh / npx<br/>plugin install"]
+```
+
+## 📑 Contents
+
+- [Available skills](#️-available-skills): Meta · Define · Plan · Build · Verify · Review · Ship · Specialized libraries
+- [Specialist personas](#-specialist-personas)
+- [Reference checklists](#-reference-checklists)
+- [Curated AI model prompts](#-curated-ai-model-prompts)
+- [Installation](#-installation) · [Skill-specific setup](#️-skill-specific-setup) · [Adding new skills](#-adding-new-skills)
+- [Global system skills](#-global-system-skills) · [Repository structure](#-repository-structure)
 
 ---
 
 ## 🛠️ Available Skills
 
-### Meta & General Execution
+<details open>
+<summary><b>Meta & General Execution</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
 | **[`using-agent-skills`](skills/using-agent-skills.md)** | Maps incoming work to the right skill workflow and defines shared operating rules. | Starting a session or deciding which skill applies |
 | **[`no-excuses-executor`](skills/no-excuses-executor.md)** | Direct task execution with zero hedging. Forces action-first completion, suppresses over-caution. | Running direct actions/commands without hesitation |
 
-### Define - Clarify what to build
+
+</details>
+
+<details open>
+<summary><b>Define - Clarify what to build</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
@@ -79,13 +126,23 @@
 | **[`idea-refine`](skills/idea-refine.md)** | Structured divergent/convergent thinking to turn vague ideas into concrete proposals. | You have a rough concept that needs exploration |
 | **[`spec-driven-development`](skills/spec-driven-development.md)** | Write a PRD covering objectives, commands, structure, code style, testing, and boundaries before any code. | Starting a new project, feature, or significant change |
 
-### Plan - Break it down
+
+</details>
+
+<details open>
+<summary><b>Plan - Break it down</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
 | **[`planning-and-task-breakdown`](skills/planning-and-task-breakdown.md)** | Decompose specs into small, verifiable tasks with acceptance criteria and dependency ordering. | You have a spec and need implementable units |
 
-### Build - Write the code
+
+</details>
+
+<details open>
+<summary><b>Build - Write the code</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
@@ -97,14 +154,24 @@
 | **[`frontend-ui-engineering`](skills/frontend-ui-engineering.md)** | Component architecture, design systems, state management, responsive design, WCAG 2.1 AA accessibility. | Building or modifying user-facing interfaces |
 | **[`api-and-interface-design`](skills/api-and-interface-design.md)** | Contract-first design, Hyrum's Law, One-Version Rule, error semantics, boundary validation. | Designing APIs, module boundaries, or public interfaces |
 
-### Verify - Prove it works
+
+</details>
+
+<details open>
+<summary><b>Verify - Prove it works</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
 | **[`browser-testing-with-devtools`](skills/browser-testing-with-devtools.md)** | Chrome DevTools MCP for live runtime data - DOM inspection, console logs, network traces, performance profiling. | Building or debugging anything that runs in a browser |
 | **[`debugging-and-error-recovery`](skills/debugging-and-error-recovery.md)** | Five-step triage: reproduce, localize, reduce, fix, guard. Stop-the-line rule, safe fallbacks. | Tests fail, builds break, or behavior is unexpected |
 
-### Review - Quality gates before merge
+
+</details>
+
+<details open>
+<summary><b>Review - Quality gates before merge</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
@@ -113,7 +180,12 @@
 | **[`security-and-hardening`](skills/security-and-hardening.md)** | OWASP Top 10 prevention, auth patterns, secrets management, dependency auditing, three-tier boundary system. | Handling user input, auth, data storage, or external integrations |
 | **[`performance-optimization`](skills/performance-optimization.md)** | Measure-first approach - Core Web Vitals targets, profiling workflows, bundle analysis, anti-pattern detection. | Performance requirements exist or you suspect regressions |
 
-### Ship - Deploy with confidence
+
+</details>
+
+<details open>
+<summary><b>Ship - Deploy with confidence</b></summary>
+
 
 | Skill | Description | Use When |
 | :--- | :--- | :--- |
@@ -125,7 +197,12 @@
 | **[`observability-and-instrumentation`](skills/observability-and-instrumentation.md)** | Structured logging, RED metrics, OpenTelemetry tracing, symptom-based alerting - instrument as you build. | Adding telemetry, or shipping anything that runs in production |
 | **[`shipping-and-launch`](skills/shipping-and-launch.md)** | Pre-launch checklists, feature flag lifecycle, staged rollouts, rollback procedures, monitoring setup. | Preparing to deploy to production |
 
-### Specialized Tools & Systems
+
+</details>
+
+<details>
+<summary><b>Specialized Tools & Systems</b></summary>
+
 
 | Skill | Description | Key Features & Integrations |
 | :--- | :--- | :--- |
@@ -134,7 +211,12 @@
 | **[`supabase`](skills/supabase.md)** | Integrate, query, manage migrations, TypeScript type generation, and configure RLS on Supabase. | Postgres migrations, RLS security, Next.js SSR cookie auth, Edge Functions, pgvector |
 | **[`web-scraper`](skills/web-scraper.md)** | Adaptive web scraping with traffic interception, framework detection, anti-blocking, and Apify Actor creation. | Traffic interception, cURL recon, Playwright/Puppeteer signatures, Apify SDK |
 
-### Modern Web Design & Layout Systems
+
+</details>
+
+<details>
+<summary><b>Modern Web Design & Layout Systems</b></summary>
+
 
 | Skill | Description |
 | :--- | :--- |
@@ -166,7 +248,12 @@
 | **[`gooey-blob-system`](skills/gooey-blob-system.md)** | Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter ... |
 | **[`ui-ux-pro-max`](skills/ui-ux-pro-max.md)** | AI-powered design intelligence with 84 UI styles, 192 color palettes, 74 font pairings, 98 UX guidelines, and 25 chart types across 22 tech stacks. |
 
-### Creative Motion, Shaders & WebGL 3D
+
+</details>
+
+<details>
+<summary><b>Creative Motion, Shaders & WebGL 3D</b></summary>
+
 
 | Skill | Description |
 | :--- | :--- |
@@ -191,7 +278,12 @@
 | **[`gsap-scrolltrigger-storytelling`](skills/gsap-scrolltrigger-storytelling.md)** | Build cinematic sticky product storytelling with GSAP ScrollTrigger, progressive UI reveals, scroll-synced animation, smooth interpolation, and immersive section transitions. |
 | **[`optimize-web-animations`](skills/optimize-web-animations.md)** | Profile, audit, and optimize frontend page performance with emphasis on animation work, memory-leak risks, long-session slowdowns, CSS animations, canvas/WebGL requestAnimationF... |
 
-### Game Development & Three.js Systems
+
+</details>
+
+<details>
+<summary><b>Game Development & Three.js Systems</b></summary>
+
 
 | Skill | Description |
 | :--- | :--- |
@@ -217,7 +309,12 @@
 | **[`test-playable-web-games`](skills/test-playable-web-games.md)** | Test a playable browser game end to end with deterministic fixtures and real browser evidence. Use for gameplay QA, regression testing, controls, accessibility, responsive/mobil... |
 | **[`tune-enemy-ai`](skills/tune-enemy-ai.md)** | Build, debug, balance, or test combat enemy AI for playable action games. Use for aggro, target selection, navigation, spacing, attack choices, telegraphs, retreats, boss behavi... |
 
-### Audit, Quality & Anti-Slop Safeguards
+
+</details>
+
+<details>
+<summary><b>Audit, Quality & Anti-Slop Safeguards</b></summary>
+
 
 | Skill | Description |
 | :--- | :--- |
@@ -229,7 +326,12 @@
 | **[`performance-profiling`](skills/performance-profiling.md)** | Guide performance profiling for Apple platform apps with Instruments, Xcode diagnostics, and MetricKit. Use when investigating app hangs, stutters, high CPU, memory leaks, memor... |
 | **[`stitched-full-page-capture`](skills/stitched-full-page-capture.md)** | Capture or repair reliable full-page screenshots for lazy-loaded, scroll-animated, Framer, WebGL/canvas, or reveal-heavy web pages. Use when full-page screenshots are blank, gra... |
 
-### Creative Sourcing, Media & Generation
+
+</details>
+
+<details>
+<summary><b>Creative Sourcing, Media & Generation</b></summary>
+
 
 | Skill | Description |
 | :--- | :--- |
@@ -249,7 +351,12 @@
 | **[`browser-video-recording`](skills/browser-video-recording.md)** | Create polished 60 fps 4:3 4K browser screen-recording style videos from Codex in-app browser captures, with browser-only crop, natural macOS cursor styling, deliberate click ch... |
 | **[`web-technique-to-skill`](skills/web-technique-to-skill.md)** | Turn a visual or interaction technique you already built into a reusable web-design skill, by isolating the one mechanism that makes it work while reproducing its approved refer... |
 
-### Antigravity IDE & System Orchestration
+
+</details>
+
+<details>
+<summary><b>Antigravity IDE & System Orchestration</b></summary>
+
 
 | Skill | Description |
 | :--- | :--- |
@@ -262,6 +369,7 @@
 | **[`publish-project-to-github`](skills/publish-project-to-github.md)** | Package a finished local project into an intentional GitHub repository, create a strong README and visual preview, push it safely, configure a public GitHub Pages URL when the p... |
 | **[`start-teardown`](skills/start-teardown.md)** | Launches the Teardown full-stack application (FastAPI backend on port 8000 + Next.js frontend on port 3005) and automatically opens the app in the user's default browser. Trigge... |
 
+</details>
 
 ---
 
@@ -522,3 +630,13 @@ description: Brief description of the skill.
 ## 📄 License
 
 MIT — free to fork and use for personal or commercial projects.
+
+---
+
+<div align="center">
+
+**If these skills make your agent better, a ⭐ helps others find them.**
+
+<a href="https://satiricalguru.github.io/Agents-skills/">Dashboard</a> · <a href="https://github.com/satiricalguru/Agents-skills/issues">Report an issue</a> · <a href="#top">Back to top ↑</a>
+
+</div>
