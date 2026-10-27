@@ -121,6 +121,7 @@
 | **[`ci-cd-and-automation`](skills/ci-cd-and-automation.md)** | Shift Left, Faster is Safer, feature flags, quality gate pipelines, failure feedback loops. | Setting up or modifying build and deploy pipelines |
 | **[`deprecation-and-migration`](skills/deprecation-and-migration.md)** | Code-as-liability mindset, compulsory vs advisory deprecation, migration patterns, zombie code removal. | Removing old systems, migrating users, or sunsetting features |
 | **[`documentation-and-adrs`](skills/documentation-and-adrs.md)** | Architecture Decision Records, API docs, inline documentation standards - document the *why*. | Making architectural decisions, changing APIs, or shipping features |
+| **[`readme-showcase`](skills/readme-showcase/SKILL.md)** | Turn a README into a polished showcase: hero banner, badges, real screenshots, demo GIFs, embedded video, feature gallery and quick start. Ships capture, GIF, banner and lint scripts. | Writing, rewriting or beautifying a README, or preparing a repo for launch |
 | **[`observability-and-instrumentation`](skills/observability-and-instrumentation.md)** | Structured logging, RED metrics, OpenTelemetry tracing, symptom-based alerting - instrument as you build. | Adding telemetry, or shipping anything that runs in production |
 | **[`shipping-and-launch`](skills/shipping-and-launch.md)** | Pre-launch checklists, feature flag lifecycle, staged rollouts, rollback procedures, monitoring setup. | Preparing to deploy to production |
 
