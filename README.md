@@ -606,6 +606,7 @@ description: Brief description of the skill.
 │   └── general/                 # Normal/standard instructions
 │       ├── Antigravity.md
 │       ├── ChatGPT.md
+│       ├── Codex.md
 │       ├── Claude.md
 │       ├── Deepseek.md
 │       ├── Gemini.md
