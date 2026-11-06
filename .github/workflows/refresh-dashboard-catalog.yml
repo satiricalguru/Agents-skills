@@ -1,0 +1,30 @@
+name: Refresh dashboard catalog
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: refresh-dashboard-catalog
+
+jobs:
+  refresh:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Generate and commit the catalog
+        run: |
+          npm run validate
+          npm run generate-db
+          if git diff --quiet -- docs/skills.json; then
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- docs/skills.json
+          git commit -m 'Refresh the generated dashboard catalog'
+          git push origin "HEAD:${GITHUB_REF}"

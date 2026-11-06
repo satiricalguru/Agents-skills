@@ -62,7 +62,7 @@ const WEBGL_3D_SKILLS = new Set([
   'build-interactive-particle-trail', 'build-threejs-scroll-worlds', 'build-wireframe-scan-reveal',
   'cinematic-gsap-lenis-motion-system', 'cinematic-scroll-storytelling', 'cobejs',
   'falling-leaves', 'globe-gl', 'globe-particles', 'gsap-scrolltrigger-storytelling',
-  'optimize-web-animations'
+  'optimize-web-animations', 'sota-animated-landing-page'
 ]);
 
 const GAMEDEV_SKILLS = new Set([
@@ -86,7 +86,7 @@ const CREATIVE_MEDIA_SKILLS = new Set([
   'generate-reference-inspired-brand-worlds', 'unsplash-asset-images', 'video-to-superprompt',
   'html-to-interaction-prompts', 'article-prompts-to-skills', 'build-daily-inspiration-sites',
   'daily-ui-inspiration-capture', 'write-like-meng-on-x', 'x-bookmark-quote-posts',
-  'browser-video-recording', 'web-technique-to-skill'
+  'browser-video-recording', 'web-technique-to-skill', 'readme-showcase', 'stageshow'
 ]);
 
 const SYSTEM_SKILLS = new Set([
@@ -96,9 +96,8 @@ const SYSTEM_SKILLS = new Set([
 ]);
 
 // Parse a single Markdown file with frontmatter
-function parseMarkdownFile(filePath) {
+function parseMarkdownFile(filePath, filename) {
   const content = fs.readFileSync(filePath, 'utf-8');
-  const filename = path.basename(filePath, '.md');
 
   let metadata = {
     id: filename,
@@ -209,6 +208,11 @@ function parseMarkdownFile(filePath) {
     metadata.why = metadata.description || 'General coding utilities, development patterns, and helper workflows';
   }
 
+  if (path.dirname(filePath) !== SKILLS_DIR) {
+    const folder = `https://github.com/satiricalguru/Agents-skills/tree/main/skills/${encodeURIComponent(filename)}`;
+    rawContent = rawContent.replace(/\]\((references\/[^\s)]+)\)/g, `](${folder}/$1)`);
+    rawContent = `[Open the full skill folder](${folder}) for supporting files and examples.\n\n${rawContent}`;
+  }
   metadata.content = rawContent;
   return metadata;
 }
@@ -220,20 +224,25 @@ function run() {
     process.exit(1);
   }
 
-  const files = fs.readdirSync(SKILLS_DIR);
+  const entries = fs.readdirSync(SKILLS_DIR, { withFileTypes: true });
+  const skillFiles = new Map();
   const skills = [];
 
-  files.forEach(file => {
-    if (path.extname(file) === '.md') {
-      const filePath = path.join(SKILLS_DIR, file);
-      try {
-        const skill = parseMarkdownFile(filePath);
-        skills.push(skill);
-      } catch (err) {
-        console.error(`Error parsing ${file}:`, err);
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      const filePath = path.join(SKILLS_DIR, entry.name, 'SKILL.md');
+      if (fs.existsSync(filePath) && !skillFiles.has(entry.name)) {
+        skillFiles.set(entry.name, filePath);
       }
+    } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      // Keep the existing flat file when a skill is also present as a folder.
+      skillFiles.set(path.basename(entry.name, '.md'), path.join(SKILLS_DIR, entry.name));
     }
-  });
+  }
+
+  for (const name of [...skillFiles.keys()].sort()) {
+    skills.push(parseMarkdownFile(skillFiles.get(name), name));
+  }
 
   // Sort by category and priority
   skills.sort((a, b) => {

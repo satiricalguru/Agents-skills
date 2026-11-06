@@ -12,5 +12,5 @@
   <circle cx="1130" cy="60" r="140" fill="#fff" opacity=".08"/>
   <circle cx="1210" cy="290" r="90" fill="#fff" opacity=".06"/>
   <text x="80" y="170" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="84" font-weight="800" fill="#fff">Agents Skills</text>
-  <text x="84" y="225" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="30" fill="#fff" opacity=".9">184 senior-engineer workflows for your AI coding agent</text>
+  <text x="84" y="225" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="30" fill="#fff" opacity=".9">187 senior-engineer workflows for your AI coding agent</text>
 </svg>

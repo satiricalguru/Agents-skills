@@ -1,13 +1,13 @@
 <div align="center">
 
-<a href="https://satiricalguru.github.io/Agents-skills/"><img src="assets/banner.svg" width="100%" alt="Agents Skills — 184 senior-engineer workflows for your AI coding agent"></a>
+<a href="https://satiricalguru.github.io/Agents-skills/"><img src="assets/banner.svg" width="100%" alt="Agents Skills — 187 senior-engineer workflows for your AI coding agent"></a>
 
 <p><b>Teach your AI coding agent to work like a senior engineer.</b><br>
-184 battle-tested skills for planning, TDD, security, reviews, WebGL, game dev and more, plus a dashboard that bundles them into one rules file.</p>
+187 skills for planning, TDD, security, reviews, WebGL, game dev and more, plus a dashboard that bundles them into one rules file.</p>
 
 <p>
 <a href="https://github.com/satiricalguru/Agents-skills/stargazers"><img src="https://img.shields.io/github/stars/satiricalguru/Agents-skills?style=for-the-badge&logo=github&labelColor=09090b&color=65a30d" alt="Stars"></a>
-<img src="https://img.shields.io/badge/skills-184-65a30d?style=for-the-badge&labelColor=09090b" alt="184 skills">
+<img src="https://img.shields.io/badge/skills-187-65a30d?style=for-the-badge&labelColor=09090b" alt="187 skills">
 <a href="LICENSE"><img src="https://img.shields.io/github/license/satiricalguru/Agents-skills?style=for-the-badge&labelColor=09090b&color=65a30d" alt="MIT license"></a>
 <a href="https://github.com/satiricalguru/Agents-skills/pulls"><img src="https://img.shields.io/badge/PRs-welcome-65a30d?style=for-the-badge&labelColor=09090b" alt="PRs welcome"></a>
 </p>
@@ -84,7 +84,7 @@ More options, including npx and manual install, are in [Installation](#-installa
 
 ```mermaid
 flowchart LR
-  A["skills/*.md<br/>184 skills"] --> B["docs/generate-skills-db.js"]
+  A["skills/*.md and skills/*/SKILL.md"] --> B["docs/generate-skills-db.js"]
   B --> C["skills.json"]
   C --> D["Dashboard<br/>pick + preview"]
   D --> E[".cursorrules · .clauderc · .windsurfrules<br/>Gemini · ChatGPT"]
@@ -514,6 +514,7 @@ description: Brief description of the skill.
 
 3. Add scripts/references in `scripts/` and `references/` subdirectories if needed.
 4. Update the [Available Skills](#️-available-skills) table in this README.
+5. After merging, run the [Refresh dashboard catalog](https://github.com/satiricalguru/Agents-skills/actions/workflows/refresh-dashboard-catalog.yml) workflow to update `docs/skills.json`. Request a Pages rebuild to publish the generated catalog.
 
 ---
 
