@@ -338,6 +338,7 @@ flowchart LR
 | :--- | :--- |
 | **[`aura-asset-images`](skills/aura-asset-images.md)** | Use when you need high-quality stock-style images from Aura Assets (aura.build/assets) similar to Unsplash for design mockups and marketing: backgrounds, abstract wallpapers, ar... |
 | **[`company-logos`](skills/company-logos.md)** | Use Iconify Simple Icons logos (64x64) instead of text logos. |
+| **[`stageshow`](skills/stageshow/SKILL.md)** | Build React product illustrations and animated cursor walkthroughs with a reusable kit, examples, and a local playground. |
 | **[`design-first-ui-prompting`](skills/design-first-ui-prompting.md)** | Use when you need design-first, spec-driven, skimmable prompts for UI generation. Covers prompt structure, constraints, variations, typography/spacing rules, and iteration workf... |
 | **[`elevenlabs-tts`](skills/elevenlabs-tts.md)** | Generate ElevenLabs text-to-speech audio from scripts or inline text using local voice profiles. Use when the user asks for ElevenLabs, text-to-speech, TTS, narration, voiceover... |
 | **[`generate-reference-inspired-brand-worlds`](skills/generate-reference-inspired-brand-worlds.md)** | Generate multiple original brand campaign worlds from a supplied visual reference while controlling how close the new work feels without copying protected signature elements. Us... |

@@ -85,7 +85,7 @@ header {
 }
 
 .brand { display: flex; align-items: center; gap: 0.7rem; min-width: 0; }
-.brand img { width: 26px !important; height: 26px !important; border-radius: 7px !important; border: 1px solid var(--line-strong) !important; box-shadow: none !important; }
+.brand img { flex: none; }
 .brand h1 { font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
 .brand p { display: none; }
 
