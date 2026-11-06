@@ -152,6 +152,7 @@ flowchart LR
 | **[`source-driven-development`](skills/source-driven-development.md)** | Ground every framework decision in official documentation - verify, cite sources, flag what's unverified. | You want authoritative, source-cited code for any framework or library |
 | **[`doubt-driven-development`](skills/doubt-driven-development.md)** | Adversarial fresh-context review of every non-trivial decision in-flight - CLAIM → EXTRACT → DOUBT → RECONCILE → STOP, with optional user-authorized cross-model escalation. | Stakes are high (production, security, irreversible), working in unfamiliar code, or verifying early is cheaper |
 | **[`frontend-ui-engineering`](skills/frontend-ui-engineering.md)** | Component architecture, design systems, state management, responsive design, WCAG 2.1 AA accessibility. | Building or modifying user-facing interfaces |
+| **[`sota-animated-landing-page`](skills/sota-animated-landing-page/SKILL.md)** | Art-direct a landing page with reference-matched imagery, cinematic scroll, responsive layouts, and visual verification. | Building or substantially redesigning an animated landing page |
 | **[`api-and-interface-design`](skills/api-and-interface-design.md)** | Contract-first design, Hyrum's Law, One-Version Rule, error semantics, boundary validation. | Designing APIs, module boundaries, or public interfaces |
 
 

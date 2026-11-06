@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOTA Animated Landing Page"
+  short_description: "Research, art direction, cinematic scroll and visual QA"
+  default_prompt: "Use $sota-animated-landing-page to research and build a landing page matching my concept and references."
